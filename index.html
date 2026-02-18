@@ -3,592 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>FrailTrack — Sit-to-Stand Assessment</title>
+    <title>FrailTrack</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* ============================================
+   FrailTrack — Apple Health-Inspired Design
+   ============================================ */
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 18px;
-            line-height: 1.5;
-            color: #1a1a1a;
-            background: #f8f9fa;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
 
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #0d6efd;
-        }
+body {
+    font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.47;
+    color: #1C1C1E;
+    background-color: #F2F2F7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-        .subtitle {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 24px;
-        }
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: 0.37px;
+    color: #1C1C1E;
+    margin-bottom: 4px;
+}
 
-        .container {
-            width: 100%;
-            max-width: 420px;
-        }
+.subtitle {
+    font-size: 15px;
+    color: #8E8E93;
+    font-weight: 400;
+    margin-bottom: 28px;
+}
 
-        /* --- Screens --- */
-        .screen {
-            display: none;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-        .screen.active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 1;
-        }
+.container {
+    width: 100%;
+    max-width: 428px;
+}
 
-        /* --- Pre-Test Screen --- */
-        .instructions {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            font-size: 16px;
-            color: #333;
-            line-height: 1.6;
-        }
+/* --- App Header --- */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+}
 
-        .btn {
-            width: 100%;
-            padding: 18px 24px;
-            font-size: 20px;
-            font-weight: 600;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-bottom: 12px;
-            transition: transform 0.1s, opacity 0.2s;
-        }
-        .btn:active {
-            transform: scale(0.97);
-        }
+.logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #007AFF, #5AC8FA);
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+}
 
-        .btn-primary {
-            background: #0d6efd;
-            color: #fff;
-        }
-        .btn-primary:hover {
-            background: #0b5ed7;
-        }
+/* --- Screens --- */
+.screen {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.screen.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
 
-        .btn-secondary {
-            background: #6c757d;
-            color: #fff;
-        }
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
+/* --- Educational Info Card --- */
+.edu-info {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    font-size: 15px;
+    color: #8E8E93;
+    line-height: 1.53;
+    width: 100%;
+}
 
-        .btn-link {
-            background: none;
-            color: #0d6efd;
-            font-size: 16px;
-            text-decoration: underline;
-            padding: 12px;
-        }
+/* --- Instructions --- */
+.instructions {
+    font-size: 15px;
+    color: #1C1C1E;
+    line-height: 1.53;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    width: 100%;
+}
 
-        /* --- Active Test Screen --- */
-        .timer-display {
-            font-size: 96px;
-            font-weight: 800;
-            color: #0d6efd;
-            margin: 20px 0;
-            font-variant-numeric: tabular-nums;
-        }
+.instructions strong {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8E8E93;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-        /* --- Live Accel Graph --- */
-        .live-graph-container {
-            width: 100%;
-            background: #fff;
-            border-radius: 12px;
-            padding: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 12px;
-        }
-        .live-graph-container canvas {
-            width: 100%;
-            height: 120px;
-            display: block;
-        }
-        .live-graph-label {
-            font-size: 12px;
-            color: #888;
-            text-align: center;
-            margin-top: 4px;
-        }
+/* --- Buttons --- */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.15s ease, transform 0.1s ease;
+    margin-bottom: 12px;
+    -webkit-appearance: none;
+}
+.btn:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
 
-        .sensor-indicator {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+.btn-primary {
+    background-color: #007AFF;
+    color: #FFFFFF;
+}
+.btn-primary:hover {
+    background-color: #0071EB;
+}
 
-        .pulse-dot {
-            width: 12px;
-            height: 12px;
-            background: #dc3545;
-            border-radius: 50%;
-            animation: pulse 1s ease-in-out infinite;
-        }
+.btn-secondary {
+    background-color: #E5E5EA;
+    color: #1C1C1E;
+}
+.btn-secondary:hover {
+    background-color: #D1D1D6;
+}
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.3); }
-        }
+.btn-link {
+    background: none;
+    color: #007AFF;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.btn-link:active {
+    opacity: 0.5;
+}
 
-        /* --- Results Screen --- */
-        .disclaimer {
-            font-size: 13px;
-            color: #777;
-            text-align: center;
-            margin-bottom: 16px;
-            line-height: 1.4;
-            padding: 8px 12px;
-            background: #fff8e1;
-            border-radius: 8px;
-            border: 1px solid #ffe082;
-            width: 100%;
-        }
+/* --- Active Test Screen --- */
+.timer-display {
+    font-size: 96px;
+    font-weight: 200;
+    color: #1C1C1E;
+    text-align: center;
+    letter-spacing: -2px;
+    margin: 24px 0;
+    font-variant-numeric: tabular-nums;
+}
 
-        .results-header {
-            text-align: center;
-            margin-bottom: 16px;
-            width: 100%;
-        }
-        .results-header h2 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
-        .results-header .date {
-            font-size: 14px;
-            color: #888;
-        }
+/* --- Live Accel Graph --- */
+.live-graph-container {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+}
+.live-graph-container canvas {
+    width: 100%;
+    height: 140px;
+    display: block;
+    border-radius: 8px;
+}
+.live-graph-label {
+    font-size: 11px;
+    color: #AEAEB2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 500;
+}
 
-        /* Tier 1: Rep Count */
-        .tier-rep {
-            background: #fff;
-            border-radius: 16px;
-            padding: 24px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 16px;
-            width: 100%;
-        }
-        .tier-rep .big-number {
-            font-size: 72px;
-            font-weight: 800;
-            color: #0d6efd;
-            line-height: 1;
-        }
-        .tier-rep .label {
-            font-size: 16px;
-            color: #555;
-            margin-top: 4px;
-        }
-        .tier-rep .norm-range {
-            font-size: 14px;
-            color: #888;
-            margin-top: 8px;
-        }
+.sensor-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #8E8E93;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
 
-        /* Tier 2: Power */
-        .tier-power {
-            background: #fff;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 16px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .tier-power .power-value {
-            font-size: 36px;
-            font-weight: 700;
-            min-width: 110px;
-        }
-        .tier-power .power-info {
-            flex: 1;
-        }
-        .tier-power .power-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-        }
-        .tier-power .power-note {
-            font-size: 12px;
-            color: #999;
-            margin-top: 4px;
-        }
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #30D158;
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
 
-        /* Tier 3: Quality Cards */
-        .quality-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+}
 
-        .quality-card {
-            background: #fff;
-            border-radius: 14px;
-            padding: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-top: 4px solid #ccc;
-        }
-        .quality-card.status-green { border-top-color: #4CAF50; }
-        .quality-card.status-yellow { border-top-color: #FF9800; }
-        .quality-card.status-red { border-top-color: #F44336; }
+/* --- Results Screen --- */
+.results-header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.results-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1C1C1E;
+    margin-bottom: 2px;
+}
+.results-header .date {
+    font-size: 15px;
+    color: #8E8E93;
+}
 
-        .quality-card .card-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 4px;
-        }
-        .quality-card .card-dimension {
-            font-size: 11px;
-            color: #aaa;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-        .quality-card .card-status {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .quality-card .card-detail {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.4;
-        }
-        .quality-card .mini-chart {
-            margin: 8px 0;
-            width: 100%;
-            overflow: visible;
-        }
+/* Tier 1: Rep Count */
+.tier-rep {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    margin-bottom: 12px;
+    width: 100%;
+}
+.tier-rep .big-number {
+    font-size: 64px;
+    font-weight: 700;
+    color: #007AFF;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+.tier-rep .label {
+    font-size: 15px;
+    color: #8E8E93;
+    margin-top: 4px;
+    font-weight: 500;
+}
+.tier-rep .norm-range {
+    font-size: 13px;
+    color: #AEAEB2;
+    margin-top: 8px;
+}
 
-        .status-msg {
-            font-size: 14px;
-            color: #888;
-            margin-top: 16px;
-            text-align: center;
-        }
+/* Tier 2: Power */
+.tier-power {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    margin-bottom: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.tier-power .power-value {
+    font-size: 36px;
+    font-weight: 700;
+    min-width: 110px;
+    letter-spacing: -0.5px;
+}
+.tier-power .power-info {
+    flex: 1;
+}
+.tier-power .power-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1C1C1E;
+}
+.tier-power .power-note {
+    font-size: 13px;
+    color: #AEAEB2;
+    margin-top: 2px;
+}
 
-        /* Color helpers */
-        .text-green { color: #4CAF50; }
-        .text-yellow { color: #FF9800; }
-        .text-red { color: #F44336; }
+/* Tier 3: Quality Cards */
+.quality-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
-        /* --- Setup Screen --- */
-        .setup-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 24px;
-            width: 100%;
-        }
-        .setup-card label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 4px;
-            margin-top: 16px;
-        }
-        .setup-card label:first-child { margin-top: 0; }
-        .setup-card input,
-        .setup-card select {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background: #f8f9fa;
-        }
-        .unit-toggle {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .unit-toggle button {
-            flex: 1;
-            padding: 8px;
-            font-size: 14px;
-            border: 2px solid #0d6efd;
-            border-radius: 8px;
-            background: #fff;
-            color: #0d6efd;
-            cursor: pointer;
-        }
-        .unit-toggle button.active {
-            background: #0d6efd;
-            color: #fff;
-        }
-        .ft-in-row { display: flex; gap: 8px; }
-        .ft-in-row input { flex: 1; }
-        .optional-label {
-            font-size: 12px;
-            color: #999;
-            font-weight: 400;
-        }
+.quality-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    border-left: 3px solid #E5E5EA;
+}
+.quality-card.status-green { border-left-color: #30D158; }
+.quality-card.status-yellow { border-left-color: #FF9F0A; }
+.quality-card.status-red { border-left-color: #FF453A; }
 
-        /* --- Dashboard Screen --- */
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 16px;
-        }
-        .dashboard-header h2 { font-size: 22px; font-weight: 700; }
-        .metric-tabs {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-            width: 100%;
-        }
-        .metric-tabs button {
-            flex: 1;
-            min-width: 0;
-            padding: 8px 4px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 2px solid #0d6efd;
-            border-radius: 8px;
-            background: #fff;
-            color: #0d6efd;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        .metric-tabs button.active { background: #0d6efd; color: #fff; }
-        .chart-container {
-            background: #fff;
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 16px;
-            width: 100%;
-            text-align: center;
-        }
-        .chart-container .chart-msg { font-size: 14px; color: #888; padding: 20px 0; }
-        .trend-alerts { width: 100%; margin-bottom: 16px; }
-        .trend-alert {
-            background: #fff8e1;
-            border: 1px solid #ffe082;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 14px;
-            color: #6d4c00;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .session-list { width: 100%; }
-        .session-list h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: #333; }
-        .session-item {
-            background: #fff;
-            border-radius: 10px;
-            padding: 14px 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-        .session-item:active { background: #f0f0f0; }
-        .session-item .session-info { flex: 1; }
-        .session-item .session-date { font-size: 14px; font-weight: 600; color: #333; }
-        .session-item .session-stats { font-size: 13px; color: #666; margin-top: 2px; }
-        .session-item .session-flags { font-size: 12px; color: #FF9800; margin-top: 2px; }
-        .session-item .session-delete {
-            padding: 6px 10px;
-            font-size: 12px;
-            color: #dc3545;
-            background: none;
-            border: 1px solid #dc3545;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-left: 12px;
-            flex-shrink: 0;
-        }
-        .session-item .session-delete:active { background: #dc3545; color: #fff; }
-        .btn-back-nav {
-            background: none;
-            border: none;
-            color: #0d6efd;
-            font-size: 16px;
-            cursor: pointer;
-            padding: 4px 0;
-        }
-        .empty-dashboard {
-            text-align: center;
-            padding: 40px 20px;
-            color: #888;
-            font-size: 16px;
-        }
+.quality-card .card-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8E8E93;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+.quality-card .card-dimension {
+    font-size: 11px;
+    color: #AEAEB2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+.quality-card .card-status {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.quality-card .card-detail {
+    font-size: 13px;
+    color: #8E8E93;
+    line-height: 1.38;
+}
+.quality-card .mini-chart {
+    margin: 6px 0;
+    width: 100%;
+    overflow: visible;
+}
 
-        /* --- Phase 7: Loading Overlay --- */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(248, 249, 250, 0.92);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-        }
-        .loading-overlay p {
-            font-size: 18px;
-            color: #555;
-            margin-top: 16px;
-            font-weight: 600;
-        }
-        .spinner {
-            width: 48px;
-            height: 48px;
-            border: 5px solid #e0e0e0;
-            border-top: 5px solid #0d6efd;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+.status-msg {
+    font-size: 15px;
+    color: #8E8E93;
+    margin-top: 16px;
+    text-align: center;
+}
 
-        /* (demo badge and demo note removed) */
+/* Color helpers */
+.text-green { color: #30D158; }
+.text-yellow { color: #FF9F0A; }
+.text-red { color: #FF453A; }
 
-        /* --- Phase 7: Few-Reps Warning --- */
-        .few-reps-note {
-            background: #fff8e1;
-            border: 1px solid #ffe082;
-            border-radius: 8px;
-            padding: 12px 16px;
-            font-size: 14px;
-            color: #6d4c00;
-            line-height: 1.4;
-            width: 100%;
-            margin-bottom: 16px;
-            text-align: center;
-        }
+/* --- Setup Screen --- */
+.setup-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+    width: 100%;
+}
+.setup-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8E8E93;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+.setup-card label:first-child { margin-top: 0; }
+.setup-card input,
+.setup-card select {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 17px;
+    color: #1C1C1E;
+    border: 1px solid #E5E5EA;
+    border-radius: 10px;
+    background: #F2F2F7;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: border-color 0.2s ease;
+}
+.setup-card input:focus,
+.setup-card select:focus {
+    border-color: #007AFF;
+}
+.unit-toggle {
+    display: flex;
+    background: #E5E5EA;
+    border-radius: 9px;
+    padding: 2px;
+    margin-bottom: 12px;
+}
+.unit-toggle button {
+    flex: 1;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #8E8E93;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.unit-toggle button.active {
+    background: #FFFFFF;
+    color: #1C1C1E;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.ft-in-row { display: flex; gap: 10px; }
+.ft-in-row input { flex: 1; }
+.optional-label {
+    font-size: 12px;
+    color: #AEAEB2;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+}
 
-        /* (rep pulse removed) */
+/* --- Dashboard Screen --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.dashboard-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.metric-tabs {
+    display: flex;
+    background: #E5E5EA;
+    border-radius: 9px;
+    padding: 2px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+.metric-tabs button {
+    flex: 1;
+    min-width: 0;
+    padding: 7px 4px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #8E8E93;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+.metric-tabs button.active {
+    background: #FFFFFF;
+    color: #1C1C1E;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.chart-container {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
+.chart-container .chart-msg {
+    font-size: 15px;
+    color: #AEAEB2;
+    padding: 40px 20px;
+}
+.trend-alerts { width: 100%; margin-bottom: 12px; }
+.trend-alert {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #8E8E93;
+    margin-bottom: 8px;
+    line-height: 1.47;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+}
+.session-list { width: 100%; }
+.session-list h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8E8E93;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+.session-item {
+    padding: 14px 0;
+    border-bottom: 0.5px solid #E5E5EA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+.session-item:active { opacity: 0.6; }
+.session-item .session-info { flex: 1; }
+.session-item .session-date { font-size: 17px; font-weight: 400; color: #1C1C1E; }
+.session-item .session-stats { font-size: 13px; color: #8E8E93; margin-top: 2px; }
+.session-item .session-flags { font-size: 13px; color: #FF9F0A; margin-top: 2px; font-weight: 500; }
+.session-item .session-delete {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #FF453A;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 12px;
+    flex-shrink: 0;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+.session-item .session-delete:active { background: rgba(255,69,58,0.08); }
+.btn-back-nav {
+    background: none;
+    border: none;
+    color: #007AFF;
+    font-family: inherit;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 4px 0;
+}
+.empty-dashboard {
+    text-align: center;
+    padding: 60px 20px;
+    color: #AEAEB2;
+    font-size: 17px;
+}
 
-        /* --- Phase 7: Educational Info Box --- */
-        .edu-info {
-            background: #e8f4fd;
-            border-radius: 10px;
-            padding: 14px 16px;
-            font-size: 14px;
-            color: #1a5276;
-            line-height: 1.5;
-            margin-bottom: 16px;
-            width: 100%;
-            text-align: left;
-        }
-
-        /* --- Phase 7: Dashboard Educational Note --- */
-        .dashboard-edu {
-            font-size: 13px;
-            color: #777;
-            text-align: center;
-            margin-bottom: 16px;
-            padding: 8px 12px;
-            background: #f0f7ff;
-            border-radius: 8px;
-            width: 100%;
-            line-height: 1.4;
-        }
-
-        /* (demo tag removed) */
-
-        /* --- Phase 7: Logo mark --- */
-        .logo-mark {
-            display: inline-block;
-            background: #0d6efd;
-            color: #fff;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            text-align: center;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 700;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-
-        /* (debug display removed — replaced by live graph) */
-
-        /* --- Phase 7: No-reps guidance --- */
-        .no-reps-guidance {
-            background: #fff3e0;
-            border: 1px solid #ffcc80;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            font-size: 15px;
-            color: #4e342e;
-            line-height: 1.6;
-            width: 100%;
-            margin-bottom: 16px;
-        }
-        .no-reps-guidance strong {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #bf360c;
-        }
+/* --- Loading Overlay --- */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(242, 242, 247, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.loading-overlay p {
+    font-size: 17px;
+    color: #8E8E93;
+    margin-top: 16px;
+    font-weight: 500;
+}
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid #E5E5EA;
+    border-top: 3px solid #007AFF;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1><span class="logo-mark">F</span>FrailTrack</h1>
-    <p class="subtitle">Sit-to-Stand Movement Assessment</p>
+    <div class="app-header">
+        <div class="logo-mark">F</div>
+        <div>
+            <h1>FrailTrack</h1>
+            <p class="subtitle">Functional Fitness Analysis</p>
+        </div>
+    </div>
 
     <!-- Screen: Setup (first visit only) -->
     <div id="screen-setup" class="screen">
-        <div style="text-align:center; margin-bottom:16px;">
-            <p style="font-size:16px; color:#555;">Welcome! Let's set up your profile before your first test.</p>
+        <div style="text-align:center; margin-bottom:20px;">
+            <p style="font-size:17px; color:#8E8E93;">Let's set up your profile to personalize your results.</p>
         </div>
         <div class="setup-card">
-            <label>Height <span style="color:#dc3545">*</span></label>
+            <label>Height <span style="color:#FF453A">*</span></label>
             <div class="unit-toggle" id="unit-toggle">
                 <button class="active" data-unit="cm">cm</button>
                 <button data-unit="ftin">ft / in</button>
@@ -605,7 +637,7 @@
 
             <label>Age Group <span class="optional-label">(optional)</span></label>
             <select id="setup-age">
-                <option value="">-- Select --</option>
+                <option value="">Select</option>
                 <option value="60-64">60-64</option>
                 <option value="65-69">65-69</option>
                 <option value="70-74">70-74</option>
@@ -617,7 +649,7 @@
 
             <label>Sex <span class="optional-label">(optional)</span></label>
             <select id="setup-sex">
-                <option value="">-- Select --</option>
+                <option value="">Select</option>
                 <option value="female">Female</option>
                 <option value="male">Male</option>
             </select>
@@ -628,11 +660,11 @@
     <!-- Screen: Pre-Test -->
     <div id="screen-pretest" class="screen">
         <div class="edu-info">
-            The 30-second chair stand test measures lower body strength and endurance. This app uses motion sensors to analyze your movement quality beyond just counting reps.
+            The 30-Second Chair Stand measures your lower body strength and endurance — key indicators of functional fitness and independence.
         </div>
         <div class="instructions">
-            <strong>Instructions:</strong><br>
-            Place your phone in your waistband at your front hip. Sit in a standard chair with arms crossed over your chest. When ready, tap Start.
+            <strong>How It Works</strong><br>
+            Place your phone in your waistband at the front hip. Sit in a standard chair with your arms crossed over your chest. When you're ready, tap Start and stand up and sit down as many times as you can in 30 seconds.
         </div>
         <button class="btn btn-primary" id="btn-start">Start Test</button>
         <button class="btn btn-link" id="btn-dashboard">View Dashboard</button>
@@ -643,80 +675,69 @@
     <div id="screen-test" class="screen">
         <div class="sensor-indicator">
             <div class="pulse-dot"></div>
-            <span id="sensor-status">Sensors active</span>
+            <span id="sensor-status">Recording</span>
         </div>
         <div class="timer-display" id="timer">30</div>
         <div class="live-graph-container">
-            <canvas id="live-graph" width="380" height="120"></canvas>
-            <div class="live-graph-label">accel_mag (g) — last 5 seconds</div>
+            <div class="live-graph-label">Acceleration</div>
+            <canvas id="live-graph" width="380" height="140"></canvas>
         </div>
     </div>
 
     <!-- Screen: Results -->
     <div id="screen-results" class="screen">
-        <button class="btn-back-nav" id="btn-results-back" style="display:none; align-self:flex-start; margin-bottom:8px;">&#8592; Back to Dashboard</button>
-        <div class="disclaimer">
-            Screening tool — not a medical diagnosis. Share results with your healthcare provider.
-        </div>
-
-        <div id="few-reps-note" class="few-reps-note" style="display:none;">
-            Fewer than 3 reps detected. CV and fatigue indicators require more reps to be meaningful.
-        </div>
+        <button class="btn-back-nav" id="btn-results-back" style="display:none; align-self:flex-start; margin-bottom:8px;">&#8592; Dashboard</button>
 
         <div class="results-header">
-            <h2>Your Results</h2>
+            <h2>Summary</h2>
             <div class="date" id="result-date"></div>
         </div>
 
         <!-- Tier 1: Rep Count -->
         <div class="tier-rep">
-            <div class="big-number" id="result-reps">—</div>
+            <div class="big-number" id="result-reps">&mdash;</div>
             <div class="label">Repetitions in 30 seconds</div>
             <div class="norm-range" id="result-norm"></div>
         </div>
 
         <!-- Tier 2: Power -->
         <div class="tier-power">
-            <div class="power-value" id="result-power">—</div>
+            <div class="power-value" id="result-power">&mdash;</div>
             <div class="power-info">
                 <div class="power-label">Relative Muscle Power</div>
                 <div class="power-status" id="result-power-status"></div>
-                <div class="power-note">Based on Alcázar et al. (2021) equation</div>
+                <div class="power-note">Estimated from your height and rep cadence</div>
             </div>
         </div>
 
         <!-- Tier 3: Quality Cards -->
         <div class="quality-grid">
-            <!-- Card 1: Push-off Force -->
             <div class="quality-card" id="card-accel">
                 <div class="card-title">Push-off Force</div>
-                <div class="card-dimension">Weakness indicator</div>
+                <div class="card-dimension">Strength</div>
                 <div class="mini-chart" id="chart-accel"></div>
                 <div class="card-status" id="status-accel"></div>
                 <div class="card-detail" id="detail-accel"></div>
             </div>
 
-            <!-- Card 2: Rotational Speed -->
             <div class="quality-card" id="card-gyro">
                 <div class="card-title">Rotational Speed</div>
-                <div class="card-dimension">Slowness indicator</div>
+                <div class="card-dimension">Mobility</div>
                 <div class="mini-chart" id="chart-gyro"></div>
                 <div class="card-status" id="status-gyro"></div>
                 <div class="card-detail" id="detail-gyro"></div>
             </div>
 
-            <!-- Card 3: Consistency -->
             <div class="quality-card" id="card-cv">
                 <div class="card-title">Consistency</div>
-                <div class="card-dimension">Exhaustion indicator</div>
+                <div class="card-dimension">Stability</div>
                 <div class="card-status" id="status-cv"></div>
                 <div class="card-detail" id="detail-cv"></div>
             </div>
 
-            <!-- Card 4: Fatigue Trend -->
             <div class="quality-card" id="card-fatigue">
                 <div class="card-title">Fatigue Trend</div>
-                <div class="card-dimension">Exhaustion indicator</div>
+                <div class="card-dimension">Endurance</div>
                 <div class="mini-chart" id="chart-fatigue"></div>
                 <div class="card-status" id="status-fatigue"></div>
                 <div class="card-detail" id="detail-fatigue"></div>
@@ -735,10 +756,6 @@
             <div style="width:60px;"></div>
         </div>
 
-        <div class="dashboard-edu">
-            Track changes over time. Discuss significant changes with your healthcare provider.
-        </div>
-
         <div class="metric-tabs" id="metric-tabs">
             <button class="active" data-metric="rep_count">Reps</button>
             <button data-metric="power_wkg">Power</button>
@@ -747,21 +764,21 @@
             <button data-metric="fatigue_slope">Fatigue</button>
         </div>
         <div class="chart-container" id="trend-chart-container">
-            <div class="chart-msg">No sessions yet. Complete a test to see trends.</div>
+            <div class="chart-msg">Complete your first test to start tracking trends.</div>
         </div>
 
         <div class="trend-alerts" id="trend-alerts"></div>
 
         <div class="session-list">
-            <h3>Session History</h3>
+            <h3>History</h3>
             <div id="session-list-items"></div>
         </div>
     </div>
 
-    <!-- Phase 7: Loading overlay -->
+    <!-- Loading overlay -->
     <div id="loading-overlay" class="loading-overlay" style="display:none;">
         <div class="spinner"></div>
-        <p>Analyzing...</p>
+        <p>Analyzing</p>
     </div>
 </div>
 
@@ -970,8 +987,8 @@ function drawLiveGraph() {
     // Size canvas to actual CSS pixel dimensions
     const rect = canvas.parentElement.getBoundingClientRect();
     const dpr = window.devicePixelRatio || 1;
-    const w = rect.width - 24; // account for padding
-    const h = 120;
+    const w = rect.width - 40; // account for padding
+    const h = 140;
     canvas.width = w * dpr;
     canvas.height = h * dpr;
     canvas.style.width = w + 'px';
@@ -989,15 +1006,15 @@ function drawLiveGraph() {
         samples.push(Math.sqrt(s.ax * s.ax + s.ay * s.ay + s.az * s.az));
     }
 
-    const padLeft = 30;
+    const padLeft = 32;
     const padRight = 5;
-    const padTop = 5;
-    const padBottom = 15;
+    const padTop = 8;
+    const padBottom = 16;
     const plotW = w - padLeft - padRight;
     const plotH = h - padTop - padBottom;
 
     // Y axis labels
-    ctx.fillStyle = '#999';
+    ctx.fillStyle = '#AEAEB2';
     ctx.font = '10px -apple-system, sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText(GRAPH_Y_MAX.toFixed(1), padLeft - 4, padTop + 8);
@@ -1005,11 +1022,19 @@ function drawLiveGraph() {
     const midY = GRAPH_Y_MAX / 2;
     ctx.fillText(midY.toFixed(1), padLeft - 4, padTop + plotH / 2 + 4);
 
+    // Grid lines
+    ctx.beginPath();
+    ctx.strokeStyle = '#F2F2F7';
+    ctx.lineWidth = 0.5;
+    ctx.moveTo(padLeft, padTop + plotH / 2);
+    ctx.lineTo(padLeft + plotW, padTop + plotH / 2);
+    ctx.stroke();
+
     // Threshold dashed line
     const threshY = padTop + plotH - (PEAK_THRESHOLD / GRAPH_Y_MAX) * plotH;
     ctx.beginPath();
     ctx.setLineDash([4, 3]);
-    ctx.strokeStyle = '#FF9800';
+    ctx.strokeStyle = '#FF9F0A';
     ctx.lineWidth = 1;
     ctx.moveTo(padLeft, threshY);
     ctx.lineTo(padLeft + plotW, threshY);
@@ -1017,7 +1042,7 @@ function drawLiveGraph() {
     ctx.setLineDash([]);
 
     // Threshold label
-    ctx.fillStyle = '#FF9800';
+    ctx.fillStyle = '#FF9F0A';
     ctx.textAlign = 'left';
     ctx.font = '9px -apple-system, sans-serif';
     ctx.fillText(PEAK_THRESHOLD + 'g', padLeft + plotW - 28, threshY - 3);
@@ -1026,7 +1051,7 @@ function drawLiveGraph() {
     if (samples.length < 2) return;
 
     ctx.beginPath();
-    ctx.strokeStyle = '#0d6efd';
+    ctx.strokeStyle = '#007AFF';
     ctx.lineWidth = 1.5;
 
     const xStep = plotW / GRAPH_SAMPLES;
@@ -1043,7 +1068,7 @@ function drawLiveGraph() {
 
     // Fill area above threshold in light orange
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255, 152, 0, 0.1)';
+    ctx.fillStyle = 'rgba(255, 159, 10, 0.1)';
     let inAbove = false;
     for (let i = 0; i < samples.length; i++) {
         const x = padLeft + xOffset + i * xStep;
@@ -1075,7 +1100,7 @@ function drawLiveGraph() {
     // Current value text
     if (samples.length > 0) {
         const current = samples[samples.length - 1];
-        ctx.fillStyle = current >= PEAK_THRESHOLD ? '#FF9800' : '#0d6efd';
+        ctx.fillStyle = current >= PEAK_THRESHOLD ? '#FF9F0A' : '#007AFF';
         ctx.font = 'bold 14px -apple-system, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText(current.toFixed(2) + 'g', padLeft + plotW, padTop + 14);
@@ -1083,7 +1108,6 @@ function drawLiveGraph() {
 }
 
 function startGraphUpdates() {
-    // Update graph every 100ms
     graphInterval = setInterval(drawLiveGraph, 100);
 }
 
@@ -1174,7 +1198,7 @@ async function startRealSensors() {
         }
     }
 
-    sensorStatus.textContent = 'Sensors active';
+    sensorStatus.textContent = 'Recording';
     showScreen(screenTest);
     playBeep(800, 300);
     startTimer();
@@ -1192,17 +1216,17 @@ async function startRealSensors() {
         if (!accel || accel.x === null || !rot || rot.alpha === null) {
             nullDataCount++;
             if (nullDataCount > 10 && !receivedData) {
-                sensorStatus.textContent = 'No sensor data received';
+                sensorStatus.textContent = 'Waiting for sensor data';
             }
             return;
         }
 
         receivedData = true;
         sensorBuffer.push({
-            ax: accel.x / 9.81,       // m/s² → g's
+            ax: accel.x / 9.81,
             ay: accel.y / 9.81,
             az: accel.z / 9.81,
-            gx: rot.alpha * Math.PI / 180,  // deg/s → rad/s
+            gx: rot.alpha * Math.PI / 180,
             gy: rot.beta * Math.PI / 180,
             gz: rot.gamma * Math.PI / 180,
             timestamp: event.timeStamp || performance.now()
@@ -1423,11 +1447,11 @@ function stopTest() {
 }
 
 // =============================================================
-// SVG MINI CHARTS (Phase 5)
+// SVG MINI CHARTS
 // =============================================================
 function createBarChart(values, options = {}) {
     const {
-        width = 140, height = 60, color = '#0d6efd',
+        width = 140, height = 60, color = '#007AFF',
         showTrend = false, trendSlope = 0, trendIntercept = 0
     } = options;
     if (!values || values.length === 0) return '';
@@ -1443,7 +1467,7 @@ function createBarChart(values, options = {}) {
         const barH = Math.max(2, (v / maxVal) * (height - 8));
         const x = offsetX + i * (barWidth + gap);
         const y = height - barH - 2;
-        bars += `<rect x="${x}" y="${y}" width="${barWidth}" height="${barH}" rx="2" fill="${color}" opacity="0.8"/>`;
+        bars += `<rect x="${x}" y="${y}" width="${barWidth}" height="${barH}" rx="2" fill="${color}" opacity="0.7"/>`;
     });
 
     let trendLine = '';
@@ -1452,7 +1476,7 @@ function createBarChart(values, options = {}) {
         const y2 = height - 2 - ((trendIntercept + trendSlope * values.length) / maxVal) * (height - 8);
         const x1 = offsetX + barWidth / 2;
         const x2 = offsetX + (values.length - 1) * (barWidth + gap) + barWidth / 2;
-        trendLine = `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#F44336" stroke-width="2" stroke-dasharray="4,2"/>`;
+        trendLine = `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#FF453A" stroke-width="2" stroke-dasharray="4,2"/>`;
     }
 
     return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">${bars}${trendLine}</svg>`;
@@ -1467,15 +1491,12 @@ function renderResults(session, savedDate) {
         dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' }) +
         ' at ' + dateObj.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
 
-    const fewRepsNoteEl = document.getElementById('few-reps-note');
-    fewRepsNoteEl.style.display = 'none';
-
     if (!session || session.repCount === 0) {
         document.getElementById('result-reps').textContent = '0';
         document.getElementById('result-norm').innerHTML =
-            '<strong>No sit-to-stand movements detected.</strong><br>' +
-            'Make sure the phone is at your waist and you are standing up fully from the chair.';
-        document.getElementById('result-power').textContent = '—';
+            '<strong>No movements detected</strong><br>' +
+            'Make sure your phone is secured at waist level and you stand up fully from the chair.';
+        document.getElementById('result-power').textContent = '\u2014';
         document.getElementById('result-power-status').textContent = '';
         ['accel', 'gyro', 'cv', 'fatigue'].forEach(id => {
             document.getElementById('status-' + id).textContent = 'No data';
@@ -1487,10 +1508,6 @@ function renderResults(session, savedDate) {
         return;
     }
 
-    if (session.repCount < 3) {
-        fewRepsNoteEl.style.display = '';
-    }
-
     document.getElementById('result-reps').textContent = session.repCount;
     const profileForNorm = getProfile();
     const normRange = getNormativeRange(
@@ -1500,10 +1517,10 @@ function renderResults(session, savedDate) {
     if (normRange) {
         const sexLabel = profileForNorm.sex === 'female' ? 'Women' : 'Men';
         document.getElementById('result-norm').textContent =
-            `Typical for ${sexLabel} ages ${profileForNorm.age_group}: ${normRange[0]}–${normRange[1]} reps`;
+            `Typical for ${sexLabel} ages ${profileForNorm.age_group}: ${normRange[0]}\u2013${normRange[1]} reps`;
     } else {
         document.getElementById('result-norm').textContent =
-            'Set age group & sex in Settings for personalized comparison';
+            'Add age and sex in Settings for a personalized comparison';
     }
 
     const powerEl = document.getElementById('result-power');
@@ -1526,11 +1543,11 @@ function renderResults(session, savedDate) {
     document.getElementById('chart-accel').innerHTML = createBarChart(accels, { color: statusColor(session.flags.weakness_accel) });
     document.getElementById('card-accel').className = 'quality-card status-' + statusClass(session.flags.weakness_accel);
     const accelStatusText = session.flags.weakness_accel === 'low' ? 'Low' :
-        session.flags.weakness_accel === 'high' ? 'Strong' : 'Intermediate';
+        session.flags.weakness_accel === 'high' ? 'Strong' : 'Moderate';
     document.getElementById('status-accel').textContent = accelStatusText;
     document.getElementById('status-accel').className = 'card-status ' + statusTextClass(session.flags.weakness_accel);
     document.getElementById('detail-accel').innerHTML =
-        `Avg ${meanAccel.toFixed(1)} m/s&sup2; across ${accels.length} rep(s)<br><span style="color:#888;font-size:12px;">Measures how forcefully you push up from the chair</span>`;
+        `Avg ${meanAccel.toFixed(1)} m/s\u00B2 across ${accels.length} rep${accels.length !== 1 ? 's' : ''}<br><span style="color:#AEAEB2;font-size:12px;">How forcefully you push up</span>`;
 
     const gyros = perRep.map(r => r.peak_gyro);
     const meanGyro = gyros.reduce((a, b) => a + b, 0) / gyros.length;
@@ -1541,7 +1558,7 @@ function renderResults(session, savedDate) {
     document.getElementById('status-gyro').textContent = gyroStatusText;
     document.getElementById('status-gyro').className = 'card-status ' + statusTextClass(gyroStatus);
     document.getElementById('detail-gyro').innerHTML =
-        `Avg ${meanGyro.toFixed(2)} rad/s across ${gyros.length} rep(s)<br><span style="color:#888;font-size:12px;">Measures how quickly your body rotates during the stand</span>`;
+        `Avg ${meanGyro.toFixed(2)} rad/s across ${gyros.length} rep${gyros.length !== 1 ? 's' : ''}<br><span style="color:#AEAEB2;font-size:12px;">How quickly you transition</span>`;
 
     const cvCard = document.getElementById('card-cv');
     const cvFlag = session.flags.exhaustion_cv;
@@ -1549,10 +1566,10 @@ function renderResults(session, savedDate) {
     document.getElementById('status-cv').textContent = `CV = ${session.cvAccel.toFixed(2)}`;
     document.getElementById('status-cv').className = 'card-status ' +
         (cvFlag === 'stable' ? 'text-green' : cvFlag === 'moderate' ? 'text-yellow' : 'text-red');
-    const cvDetailText = cvFlag === 'stable' ? 'Your reps were consistent' :
-        cvFlag === 'moderate' ? 'Some variation between reps' : 'Your performance varied significantly across reps';
+    const cvDetailText = cvFlag === 'stable' ? 'Consistent reps throughout' :
+        cvFlag === 'moderate' ? 'Some variation between reps' : 'Significant variation between reps';
     document.getElementById('detail-cv').innerHTML =
-        cvDetailText + '<br><span style="color:#888;font-size:12px;">How similar your reps are to each other</span>';
+        cvDetailText + '<br><span style="color:#AEAEB2;font-size:12px;">Rep-to-rep similarity</span>';
 
     const fatigueCard = document.getElementById('card-fatigue');
     const fatFlag = session.flags.exhaustion_fatigue;
@@ -1560,7 +1577,7 @@ function renderResults(session, savedDate) {
     const meanRepNum = (accels.length + 1) / 2;
     const trendIntercept = meanAccel - session.fatigueSlope * meanRepNum;
     document.getElementById('chart-fatigue').innerHTML = createBarChart(accels, {
-        color: '#6c757d',
+        color: '#8E8E93',
         showTrend: accels.length > 1,
         trendSlope: session.fatigueSlope,
         trendIntercept: trendIntercept
@@ -1570,17 +1587,17 @@ function renderResults(session, savedDate) {
     document.getElementById('status-fatigue').textContent = fatStatusText;
     document.getElementById('status-fatigue').className = 'card-status ' +
         (fatFlag === 'stable' ? 'text-green' : fatFlag === 'mild_decline' ? 'text-yellow' : 'text-red');
-    const fatDetailText = fatFlag === 'stable' ? 'Your performance was steady throughout' :
-        fatFlag === 'mild_decline' ? 'Your later reps were slightly weaker' :
-        'Your later reps were noticeably weaker than your first';
+    const fatDetailText = fatFlag === 'stable' ? 'Steady performance throughout' :
+        fatFlag === 'mild_decline' ? 'Later reps slightly weaker' :
+        'Notable drop-off in later reps';
     document.getElementById('detail-fatigue').innerHTML =
-        fatDetailText + '<br><span style="color:#888;font-size:12px;">Whether your performance changes from early to late reps</span>';
+        fatDetailText + '<br><span style="color:#AEAEB2;font-size:12px;">Early vs. late performance</span>';
 }
 
 function statusColor(flag) {
-    if (flag === 'high' || flag === 'strong') return '#4CAF50';
-    if (flag === 'intermediate' || flag === 'moderate') return '#FF9800';
-    return '#F44336';
+    if (flag === 'high' || flag === 'strong') return '#30D158';
+    if (flag === 'intermediate' || flag === 'moderate') return '#FF9F0A';
+    return '#FF453A';
 }
 function statusClass(flag) {
     if (flag === 'high' || flag === 'strong') return 'green';
@@ -1683,7 +1700,7 @@ function getMetricLabel(metric) {
     switch (metric) {
         case 'rep_count': return 'Reps';
         case 'power_wkg': return 'W/kg';
-        case 'mean_peak_accel': return 'm/s²';
+        case 'mean_peak_accel': return 'm/s\u00B2';
         case 'cv_accel': return 'CV';
         case 'fatigue_slope': return 'slope';
         default: return '';
@@ -1692,10 +1709,10 @@ function getMetricLabel(metric) {
 
 function getThresholdForMetric(metric) {
     switch (metric) {
-        case 'power_wkg': return { value: 2.0, label: '2.0 W/kg', color: '#FF9800' };
-        case 'mean_peak_accel': return { value: 2.7, label: '2.7 m/s²', color: '#FF9800' };
-        case 'cv_accel': return { value: 0.30, label: 'CV 0.30', color: '#FF9800' };
-        case 'fatigue_slope': return { value: -0.15, label: '-0.15', color: '#FF9800' };
+        case 'power_wkg': return { value: 2.0, label: '2.0 W/kg', color: '#FF9F0A' };
+        case 'mean_peak_accel': return { value: 2.7, label: '2.7 m/s\u00B2', color: '#FF9F0A' };
+        case 'cv_accel': return { value: 0.30, label: 'CV 0.30', color: '#FF9F0A' };
+        case 'fatigue_slope': return { value: -0.15, label: '-0.15', color: '#FF9F0A' };
         default: return null;
     }
 }
@@ -1703,7 +1720,7 @@ function getThresholdForMetric(metric) {
 function renderTrendChart(sessions) {
     const container = document.getElementById('trend-chart-container');
     if (sessions.length === 0) {
-        container.innerHTML = '<div class="chart-msg">No sessions yet. Complete a test to see trends.</div>';
+        container.innerHTML = '<div class="chart-msg">Complete your first test to start tracking trends.</div>';
         return;
     }
 
@@ -1729,8 +1746,8 @@ function renderTrendChart(sessions) {
         return { x, y };
     });
 
-    let svgContent = `<line x1="${pad}" y1="${pad}" x2="${pad}" y2="${pad + plotH}" stroke="#ddd" stroke-width="1"/>`;
-    svgContent += `<line x1="${pad}" y1="${pad + plotH}" x2="${pad + plotW}" y2="${pad + plotH}" stroke="#ddd" stroke-width="1"/>`;
+    let svgContent = `<line x1="${pad}" y1="${pad}" x2="${pad}" y2="${pad + plotH}" stroke="#E5E5EA" stroke-width="1"/>`;
+    svgContent += `<line x1="${pad}" y1="${pad + plotH}" x2="${pad + plotW}" y2="${pad + plotH}" stroke="#E5E5EA" stroke-width="1"/>`;
 
     const threshold = getThresholdForMetric(currentMetric);
     if (threshold && threshold.value >= minVal && threshold.value <= maxVal) {
@@ -1741,20 +1758,20 @@ function renderTrendChart(sessions) {
 
     if (points.length > 1) {
         const pathD = points.map((p, i) => (i === 0 ? `M${p.x},${p.y}` : `L${p.x},${p.y}`)).join(' ');
-        svgContent += `<path d="${pathD}" fill="none" stroke="#0d6efd" stroke-width="2"/>`;
+        svgContent += `<path d="${pathD}" fill="none" stroke="#007AFF" stroke-width="2"/>`;
     }
 
     points.forEach((p, i) => {
-        svgContent += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#0d6efd"/>`;
-        svgContent += `<text x="${p.x}" y="${p.y - 8}" text-anchor="middle" font-size="11" fill="#333">${typeof values[i] === 'number' ? (Number.isInteger(values[i]) ? values[i] : values[i].toFixed(2)) : values[i]}</text>`;
-        svgContent += `<text x="${p.x}" y="${pad + plotH + 14}" text-anchor="middle" font-size="10" fill="#999">${labels[i]}</text>`;
+        svgContent += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#007AFF"/>`;
+        svgContent += `<text x="${p.x}" y="${p.y - 8}" text-anchor="middle" font-size="11" fill="#1C1C1E">${typeof values[i] === 'number' ? (Number.isInteger(values[i]) ? values[i] : values[i].toFixed(2)) : values[i]}</text>`;
+        svgContent += `<text x="${p.x}" y="${pad + plotH + 14}" text-anchor="middle" font-size="10" fill="#AEAEB2">${labels[i]}</text>`;
     });
 
-    svgContent += `<text x="${pad - 4}" y="${pad - 4}" text-anchor="end" font-size="10" fill="#999">${typeof maxVal === 'number' ? (Number.isInteger(maxVal) ? maxVal : maxVal.toFixed(2)) : maxVal}</text>`;
-    svgContent += `<text x="${pad - 4}" y="${pad + plotH + 4}" text-anchor="end" font-size="10" fill="#999">${typeof minVal === 'number' ? (Number.isInteger(minVal) ? minVal : minVal.toFixed(2)) : minVal}</text>`;
+    svgContent += `<text x="${pad - 4}" y="${pad - 4}" text-anchor="end" font-size="10" fill="#AEAEB2">${typeof maxVal === 'number' ? (Number.isInteger(maxVal) ? maxVal : maxVal.toFixed(2)) : maxVal}</text>`;
+    svgContent += `<text x="${pad - 4}" y="${pad + plotH + 4}" text-anchor="end" font-size="10" fill="#AEAEB2">${typeof minVal === 'number' ? (Number.isInteger(minVal) ? minVal : minVal.toFixed(2)) : minVal}</text>`;
 
     const label = getMetricLabel(currentMetric);
-    svgContent += `<text x="${W / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="#666">${label}</text>`;
+    svgContent += `<text x="${W / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="#8E8E93">${label}</text>`;
 
     container.innerHTML = `<svg width="100%" viewBox="0 0 ${W} ${H}">${svgContent}</svg>`;
 }
@@ -1769,16 +1786,16 @@ function renderTrendAlerts(sessions) {
     const alerts = [];
 
     const fs = last3.map(s => s.fatigue_slope);
-    if (fs[0] < fs[1] && fs[1] < fs[2]) alerts.push('Your fatigue slope has worsened over your last 3 sessions.');
+    if (fs[0] < fs[1] && fs[1] < fs[2]) alerts.push('Fatigue slope has increased over your last 3 sessions.');
 
     const cv = last3.map(s => s.cv_accel);
-    if (cv[0] > cv[1] && cv[1] > cv[2]) alerts.push('Your consistency (CV) has increased — your reps are becoming more variable.');
+    if (cv[0] > cv[1] && cv[1] > cv[2]) alerts.push('Consistency has decreased — reps are becoming more variable.');
 
     const pw = last3.map(s => s.power_wkg);
-    if (pw[0] < pw[1] && pw[1] < pw[2]) alerts.push('Your power output has decreased over your last 3 sessions.');
+    if (pw[0] < pw[1] && pw[1] < pw[2]) alerts.push('Power output has decreased over your last 3 sessions.');
 
     const rc = last3.map(s => s.rep_count);
-    if (rc[0] < rc[1] && rc[1] < rc[2]) alerts.push('Your rep count has declined over your last 3 sessions.');
+    if (rc[0] < rc[1] && rc[1] < rc[2]) alerts.push('Rep count has declined over your last 3 sessions.');
 
     alerts.forEach(msg => {
         container.innerHTML += `<div class="trend-alert">${msg}</div>`;
@@ -1788,7 +1805,7 @@ function renderTrendAlerts(sessions) {
 function renderSessionList(sessions) {
     const listContainer = document.getElementById('session-list-items');
     if (sessions.length === 0) {
-        listContainer.innerHTML = '<div class="empty-dashboard">No sessions yet. Complete a test to get started.</div>';
+        listContainer.innerHTML = '<div class="empty-dashboard">Complete your first test to start building your history.</div>';
         return;
     }
 
@@ -1805,7 +1822,7 @@ function renderSessionList(sessions) {
         return `<div class="session-item" data-session-id="${s.id}">
                 <div class="session-info" onclick="viewSession('${s.id}')">
                     <div class="session-date">${dateStr} at ${timeStr}</div>
-                    <div class="session-stats">${s.rep_count} reps &middot; ${s.power_wkg.toFixed(1)} W/kg</div>
+                    <div class="session-stats">${s.rep_count} reps \u00B7 ${s.power_wkg.toFixed(1)} W/kg</div>
                     ${flagText ? `<div class="session-flags">${flagText}</div>` : ''}
                 </div>
                 <button class="session-delete" onclick="event.stopPropagation(); confirmDeleteSession('${s.id}')">Delete</button>
@@ -1921,6 +1938,7 @@ function initApp() {
 }
 
 initApp();
+
 </script>
 
 </body>
