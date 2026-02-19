@@ -1,0 +1,746 @@
+subject_id,activity,trial_id,model,n_windows,n_pos_windows,detected,n_pred_events
+SE01,D07,1,Threshold Baseline (48),8,7,1,1
+SE01,D07,1,Logistic Regression (48),8,0,0,0
+SE01,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D07,1,Random Forest (48),8,0,0,0
+SE01,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE01,D07,2,Threshold Baseline (48),8,7,1,1
+SE01,D07,2,Logistic Regression (48),8,0,0,0
+SE01,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D07,2,Random Forest (48),8,0,0,0
+SE01,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE01,D07,3,Threshold Baseline (48),8,6,1,1
+SE01,D07,3,Logistic Regression (48),8,1,1,1
+SE01,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D07,3,Random Forest (48),8,0,0,0
+SE01,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE01,D07,4,Threshold Baseline (48),8,6,1,1
+SE01,D07,4,Logistic Regression (48),8,1,1,1
+SE01,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D07,4,Random Forest (48),8,0,0,0
+SE01,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE01,D07,5,Threshold Baseline (48),8,7,1,1
+SE01,D07,5,Logistic Regression (48),8,0,0,0
+SE01,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D07,5,Random Forest (48),8,0,0,0
+SE01,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE01,D08,1,Threshold Baseline (48),8,6,1,1
+SE01,D08,1,Logistic Regression (48),8,0,0,0
+SE01,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D08,1,Random Forest (48),8,0,0,0
+SE01,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE01,D08,2,Threshold Baseline (48),8,5,1,1
+SE01,D08,2,Logistic Regression (48),8,1,1,1
+SE01,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D08,2,Random Forest (48),8,0,0,0
+SE01,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE01,D08,3,Threshold Baseline (48),8,6,1,1
+SE01,D08,3,Logistic Regression (48),8,1,1,1
+SE01,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D08,3,Random Forest (48),8,0,0,0
+SE01,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE01,D08,4,Threshold Baseline (48),8,8,1,1
+SE01,D08,4,Logistic Regression (48),8,0,0,0
+SE01,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D08,4,Random Forest (48),8,0,0,0
+SE01,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE01,D08,5,Threshold Baseline (48),8,7,1,1
+SE01,D08,5,Logistic Regression (48),8,1,1,1
+SE01,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE01,D08,5,Random Forest (48),8,0,0,0
+SE01,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE02,D07,1,Threshold Baseline (48),8,5,1,1
+SE02,D07,1,Logistic Regression (48),8,8,1,1
+SE02,D07,1,Logistic Regression (24 (accel)),8,1,1,1
+SE02,D07,1,Random Forest (48),8,0,0,0
+SE02,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE02,D07,2,Threshold Baseline (48),8,4,1,1
+SE02,D07,2,Logistic Regression (48),8,8,1,1
+SE02,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D07,2,Random Forest (48),8,0,0,0
+SE02,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE02,D07,3,Threshold Baseline (48),8,4,1,1
+SE02,D07,3,Logistic Regression (48),8,8,1,1
+SE02,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D07,3,Random Forest (48),8,0,0,0
+SE02,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE02,D07,4,Threshold Baseline (48),8,6,1,1
+SE02,D07,4,Logistic Regression (48),8,8,1,1
+SE02,D07,4,Logistic Regression (24 (accel)),8,1,1,1
+SE02,D07,4,Random Forest (48),8,0,0,0
+SE02,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE02,D07,5,Threshold Baseline (48),8,4,1,1
+SE02,D07,5,Logistic Regression (48),8,8,1,1
+SE02,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D07,5,Random Forest (48),8,0,0,0
+SE02,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE02,D08,1,Threshold Baseline (48),8,5,1,1
+SE02,D08,1,Logistic Regression (48),8,6,1,1
+SE02,D08,1,Logistic Regression (24 (accel)),8,1,1,1
+SE02,D08,1,Random Forest (48),8,0,0,0
+SE02,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE02,D08,2,Threshold Baseline (48),8,4,1,1
+SE02,D08,2,Logistic Regression (48),8,8,1,1
+SE02,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D08,2,Random Forest (48),8,0,0,0
+SE02,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE02,D08,3,Threshold Baseline (48),8,4,1,1
+SE02,D08,3,Logistic Regression (48),8,8,1,1
+SE02,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D08,3,Random Forest (48),8,0,0,0
+SE02,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE02,D08,4,Threshold Baseline (48),8,4,1,2
+SE02,D08,4,Logistic Regression (48),8,8,1,1
+SE02,D08,4,Logistic Regression (24 (accel)),8,1,1,1
+SE02,D08,4,Random Forest (48),8,0,0,0
+SE02,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE02,D08,5,Threshold Baseline (48),8,4,1,1
+SE02,D08,5,Logistic Regression (48),8,8,1,1
+SE02,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE02,D08,5,Random Forest (48),8,0,0,0
+SE02,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE03,D07,1,Threshold Baseline (48),8,4,1,1
+SE03,D07,1,Logistic Regression (48),8,8,1,1
+SE03,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D07,1,Random Forest (48),8,0,0,0
+SE03,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE03,D07,2,Threshold Baseline (48),8,5,1,1
+SE03,D07,2,Logistic Regression (48),8,7,1,1
+SE03,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D07,2,Random Forest (48),8,0,0,0
+SE03,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE03,D07,3,Threshold Baseline (48),8,6,1,1
+SE03,D07,3,Logistic Regression (48),8,7,1,1
+SE03,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D07,3,Random Forest (48),8,0,0,0
+SE03,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE03,D07,4,Threshold Baseline (48),8,5,1,1
+SE03,D07,4,Logistic Regression (48),8,8,1,1
+SE03,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D07,4,Random Forest (48),8,0,0,0
+SE03,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE03,D07,5,Threshold Baseline (48),8,6,1,1
+SE03,D07,5,Logistic Regression (48),8,8,1,1
+SE03,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D07,5,Random Forest (48),8,0,0,0
+SE03,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE03,D08,1,Threshold Baseline (48),8,6,1,1
+SE03,D08,1,Logistic Regression (48),8,4,1,2
+SE03,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D08,1,Random Forest (48),8,0,0,0
+SE03,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE03,D08,2,Threshold Baseline (48),8,5,1,1
+SE03,D08,2,Logistic Regression (48),8,4,1,1
+SE03,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D08,2,Random Forest (48),8,0,0,0
+SE03,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE03,D08,3,Threshold Baseline (48),8,5,1,1
+SE03,D08,3,Logistic Regression (48),8,4,1,1
+SE03,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D08,3,Random Forest (48),8,0,0,0
+SE03,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE03,D08,4,Threshold Baseline (48),8,6,1,1
+SE03,D08,4,Logistic Regression (48),8,4,1,1
+SE03,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D08,4,Random Forest (48),8,0,0,0
+SE03,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE03,D08,5,Threshold Baseline (48),8,4,1,1
+SE03,D08,5,Logistic Regression (48),8,4,1,1
+SE03,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE03,D08,5,Random Forest (48),8,0,0,0
+SE03,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE04,D07,1,Threshold Baseline (48),8,3,1,1
+SE04,D07,1,Logistic Regression (48),8,8,1,1
+SE04,D07,1,Logistic Regression (24 (accel)),8,2,1,1
+SE04,D07,1,Random Forest (48),8,0,0,0
+SE04,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE04,D07,2,Threshold Baseline (48),8,5,1,1
+SE04,D07,2,Logistic Regression (48),8,8,1,1
+SE04,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE04,D07,2,Random Forest (48),8,0,0,0
+SE04,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE04,D07,3,Threshold Baseline (48),8,2,1,1
+SE04,D07,3,Logistic Regression (48),8,8,1,1
+SE04,D07,3,Logistic Regression (24 (accel)),8,1,1,1
+SE04,D07,3,Random Forest (48),8,0,0,0
+SE04,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE04,D07,4,Threshold Baseline (48),8,4,1,1
+SE04,D07,4,Logistic Regression (48),8,8,1,1
+SE04,D07,4,Logistic Regression (24 (accel)),8,2,1,2
+SE04,D07,4,Random Forest (48),8,0,0,0
+SE04,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE04,D07,5,Threshold Baseline (48),8,4,1,1
+SE04,D07,5,Logistic Regression (48),8,8,1,1
+SE04,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE04,D07,5,Random Forest (48),8,0,0,0
+SE04,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE04,D08,1,Threshold Baseline (48),8,5,1,1
+SE04,D08,1,Logistic Regression (48),8,5,1,1
+SE04,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE04,D08,1,Random Forest (48),8,0,0,0
+SE04,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE04,D08,2,Threshold Baseline (48),8,6,1,1
+SE04,D08,2,Logistic Regression (48),8,5,1,1
+SE04,D08,2,Logistic Regression (24 (accel)),8,2,1,1
+SE04,D08,2,Random Forest (48),8,0,0,0
+SE04,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE04,D08,3,Threshold Baseline (48),8,5,1,1
+SE04,D08,3,Logistic Regression (48),8,6,1,1
+SE04,D08,3,Logistic Regression (24 (accel)),8,3,1,2
+SE04,D08,3,Random Forest (48),8,0,0,0
+SE04,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE04,D08,4,Threshold Baseline (48),8,5,1,1
+SE04,D08,4,Logistic Regression (48),8,5,1,2
+SE04,D08,4,Logistic Regression (24 (accel)),8,4,1,1
+SE04,D08,4,Random Forest (48),8,0,0,0
+SE04,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE04,D08,5,Threshold Baseline (48),8,4,1,1
+SE04,D08,5,Logistic Regression (48),8,5,1,1
+SE04,D08,5,Logistic Regression (24 (accel)),8,2,1,1
+SE04,D08,5,Random Forest (48),8,0,0,0
+SE04,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE05,D07,1,Threshold Baseline (48),8,6,1,1
+SE05,D07,1,Logistic Regression (48),8,1,1,1
+SE05,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D07,1,Random Forest (48),8,0,0,0
+SE05,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE05,D07,2,Threshold Baseline (48),8,6,1,1
+SE05,D07,2,Logistic Regression (48),8,2,1,2
+SE05,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D07,2,Random Forest (48),8,0,0,0
+SE05,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE05,D07,3,Threshold Baseline (48),8,6,1,1
+SE05,D07,3,Logistic Regression (48),8,2,1,2
+SE05,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D07,3,Random Forest (48),8,0,0,0
+SE05,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE05,D07,4,Threshold Baseline (48),8,7,1,1
+SE05,D07,4,Logistic Regression (48),8,1,1,1
+SE05,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D07,4,Random Forest (48),8,0,0,0
+SE05,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE05,D07,5,Threshold Baseline (48),8,6,1,1
+SE05,D07,5,Logistic Regression (48),8,2,1,1
+SE05,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D07,5,Random Forest (48),8,0,0,0
+SE05,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE05,D08,1,Threshold Baseline (48),8,4,1,1
+SE05,D08,1,Logistic Regression (48),8,1,1,1
+SE05,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D08,1,Random Forest (48),8,0,0,0
+SE05,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE05,D08,2,Threshold Baseline (48),8,6,1,1
+SE05,D08,2,Logistic Regression (48),8,2,1,1
+SE05,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D08,2,Random Forest (48),8,0,0,0
+SE05,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE05,D08,3,Threshold Baseline (48),8,5,1,1
+SE05,D08,3,Logistic Regression (48),8,3,1,2
+SE05,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D08,3,Random Forest (48),8,0,0,0
+SE05,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE05,D08,4,Threshold Baseline (48),8,5,1,1
+SE05,D08,4,Logistic Regression (48),8,2,1,1
+SE05,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D08,4,Random Forest (48),8,0,0,0
+SE05,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE05,D08,5,Threshold Baseline (48),8,6,1,1
+SE05,D08,5,Logistic Regression (48),8,2,1,2
+SE05,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE05,D08,5,Random Forest (48),8,0,0,0
+SE05,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE06,D07,1,Threshold Baseline (48),8,2,1,1
+SE06,D07,1,Logistic Regression (48),8,8,1,1
+SE06,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D07,1,Random Forest (48),8,0,0,0
+SE06,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE06,D07,2,Threshold Baseline (48),8,0,0,0
+SE06,D07,2,Logistic Regression (48),8,8,1,1
+SE06,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D07,2,Random Forest (48),8,0,0,0
+SE06,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE06,D07,3,Threshold Baseline (48),8,0,0,0
+SE06,D07,3,Logistic Regression (48),8,7,1,1
+SE06,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D07,3,Random Forest (48),8,0,0,0
+SE06,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE06,D07,4,Threshold Baseline (48),8,2,1,1
+SE06,D07,4,Logistic Regression (48),8,8,1,1
+SE06,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D07,4,Random Forest (48),8,0,0,0
+SE06,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE06,D07,5,Threshold Baseline (48),8,2,1,1
+SE06,D07,5,Logistic Regression (48),8,8,1,1
+SE06,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D07,5,Random Forest (48),8,0,0,0
+SE06,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE06,D08,1,Threshold Baseline (48),8,4,1,1
+SE06,D08,1,Logistic Regression (48),8,7,1,1
+SE06,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D08,1,Random Forest (48),8,0,0,0
+SE06,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE06,D08,2,Threshold Baseline (48),8,4,1,1
+SE06,D08,2,Logistic Regression (48),8,6,1,1
+SE06,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D08,2,Random Forest (48),8,0,0,0
+SE06,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE06,D08,3,Threshold Baseline (48),8,5,1,1
+SE06,D08,3,Logistic Regression (48),8,5,1,2
+SE06,D08,3,Logistic Regression (24 (accel)),8,1,1,1
+SE06,D08,3,Random Forest (48),8,0,0,0
+SE06,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE06,D08,4,Threshold Baseline (48),8,6,1,1
+SE06,D08,4,Logistic Regression (48),8,7,1,1
+SE06,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D08,4,Random Forest (48),8,0,0,0
+SE06,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE06,D08,5,Threshold Baseline (48),8,4,1,1
+SE06,D08,5,Logistic Regression (48),8,6,1,1
+SE06,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE06,D08,5,Random Forest (48),8,0,0,0
+SE06,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE07,D07,1,Threshold Baseline (48),8,6,1,1
+SE07,D07,1,Logistic Regression (48),8,0,0,0
+SE07,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D07,1,Random Forest (48),8,0,0,0
+SE07,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE07,D07,2,Threshold Baseline (48),8,6,1,1
+SE07,D07,2,Logistic Regression (48),8,1,1,1
+SE07,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D07,2,Random Forest (48),8,0,0,0
+SE07,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE07,D07,3,Threshold Baseline (48),8,5,1,1
+SE07,D07,3,Logistic Regression (48),8,0,0,0
+SE07,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D07,3,Random Forest (48),8,0,0,0
+SE07,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE07,D07,4,Threshold Baseline (48),8,6,1,1
+SE07,D07,4,Logistic Regression (48),8,1,1,1
+SE07,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D07,4,Random Forest (48),8,0,0,0
+SE07,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE07,D07,5,Threshold Baseline (48),8,7,1,1
+SE07,D07,5,Logistic Regression (48),8,0,0,0
+SE07,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D07,5,Random Forest (48),8,0,0,0
+SE07,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE07,D08,1,Threshold Baseline (48),8,5,1,1
+SE07,D08,1,Logistic Regression (48),8,1,1,1
+SE07,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D08,1,Random Forest (48),8,0,0,0
+SE07,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE07,D08,2,Threshold Baseline (48),8,6,1,1
+SE07,D08,2,Logistic Regression (48),8,2,1,2
+SE07,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D08,2,Random Forest (48),8,0,0,0
+SE07,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE07,D08,3,Threshold Baseline (48),8,6,1,1
+SE07,D08,3,Logistic Regression (48),8,3,1,2
+SE07,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D08,3,Random Forest (48),8,0,0,0
+SE07,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE07,D08,4,Threshold Baseline (48),8,5,1,1
+SE07,D08,4,Logistic Regression (48),8,1,1,1
+SE07,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE07,D08,4,Random Forest (48),8,0,0,0
+SE07,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE07,D08,5,Threshold Baseline (48),8,5,1,1
+SE07,D08,5,Logistic Regression (48),8,1,1,1
+SE07,D08,5,Logistic Regression (24 (accel)),8,1,1,1
+SE07,D08,5,Random Forest (48),8,0,0,0
+SE07,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE08,D07,1,Threshold Baseline (48),8,4,1,1
+SE08,D07,1,Logistic Regression (48),8,7,1,1
+SE08,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D07,1,Random Forest (48),8,0,0,0
+SE08,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE08,D07,2,Threshold Baseline (48),8,4,1,1
+SE08,D07,2,Logistic Regression (48),8,7,1,1
+SE08,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D07,2,Random Forest (48),8,0,0,0
+SE08,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE08,D07,3,Threshold Baseline (48),8,5,1,1
+SE08,D07,3,Logistic Regression (48),8,5,1,1
+SE08,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D07,3,Random Forest (48),8,0,0,0
+SE08,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE08,D07,4,Threshold Baseline (48),8,4,1,1
+SE08,D07,4,Logistic Regression (48),8,7,1,1
+SE08,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D07,4,Random Forest (48),8,0,0,0
+SE08,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE08,D07,5,Threshold Baseline (48),8,4,1,1
+SE08,D07,5,Logistic Regression (48),8,7,1,1
+SE08,D07,5,Logistic Regression (24 (accel)),8,2,1,2
+SE08,D07,5,Random Forest (48),8,0,0,0
+SE08,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE08,D08,1,Threshold Baseline (48),8,5,1,1
+SE08,D08,1,Logistic Regression (48),8,5,1,1
+SE08,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D08,1,Random Forest (48),8,0,0,0
+SE08,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE08,D08,2,Threshold Baseline (48),8,4,1,1
+SE08,D08,2,Logistic Regression (48),8,6,1,1
+SE08,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE08,D08,2,Random Forest (48),8,0,0,0
+SE08,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE08,D08,3,Threshold Baseline (48),8,4,1,1
+SE08,D08,3,Logistic Regression (48),8,8,1,1
+SE08,D08,3,Logistic Regression (24 (accel)),8,2,1,2
+SE08,D08,3,Random Forest (48),8,0,0,0
+SE08,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE08,D08,4,Threshold Baseline (48),8,5,1,1
+SE08,D08,4,Logistic Regression (48),8,5,1,1
+SE08,D08,4,Logistic Regression (24 (accel)),8,3,1,2
+SE08,D08,4,Random Forest (48),8,0,0,0
+SE08,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE08,D08,5,Threshold Baseline (48),8,4,1,1
+SE08,D08,5,Logistic Regression (48),8,5,1,1
+SE08,D08,5,Logistic Regression (24 (accel)),8,1,1,1
+SE08,D08,5,Random Forest (48),8,0,0,0
+SE08,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE09,D07,1,Threshold Baseline (48),8,6,1,1
+SE09,D07,1,Logistic Regression (48),8,4,1,1
+SE09,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D07,1,Random Forest (48),8,0,0,0
+SE09,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE09,D07,2,Threshold Baseline (48),8,0,0,0
+SE09,D07,2,Logistic Regression (48),8,2,1,1
+SE09,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D07,2,Random Forest (48),8,0,0,0
+SE09,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE09,D07,3,Threshold Baseline (48),8,4,1,1
+SE09,D07,3,Logistic Regression (48),8,4,1,1
+SE09,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D07,3,Random Forest (48),8,0,0,0
+SE09,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE09,D07,4,Threshold Baseline (48),8,5,1,1
+SE09,D07,4,Logistic Regression (48),8,4,1,1
+SE09,D07,4,Logistic Regression (24 (accel)),8,1,1,1
+SE09,D07,4,Random Forest (48),8,0,0,0
+SE09,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE09,D07,5,Threshold Baseline (48),8,4,1,1
+SE09,D07,5,Logistic Regression (48),8,3,1,1
+SE09,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D07,5,Random Forest (48),8,0,0,0
+SE09,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE09,D08,1,Threshold Baseline (48),8,5,1,1
+SE09,D08,1,Logistic Regression (48),8,4,1,1
+SE09,D08,1,Logistic Regression (24 (accel)),8,1,1,1
+SE09,D08,1,Random Forest (48),8,0,0,0
+SE09,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE09,D08,2,Threshold Baseline (48),8,7,1,1
+SE09,D08,2,Logistic Regression (48),8,4,1,1
+SE09,D08,2,Logistic Regression (24 (accel)),8,1,1,1
+SE09,D08,2,Random Forest (48),8,0,0,0
+SE09,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE09,D08,3,Threshold Baseline (48),8,4,1,1
+SE09,D08,3,Logistic Regression (48),8,3,1,2
+SE09,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D08,3,Random Forest (48),8,0,0,0
+SE09,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE09,D08,4,Threshold Baseline (48),8,5,1,1
+SE09,D08,4,Logistic Regression (48),8,4,1,1
+SE09,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE09,D08,4,Random Forest (48),8,0,0,0
+SE09,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE09,D08,5,Threshold Baseline (48),8,4,1,1
+SE09,D08,5,Logistic Regression (48),8,4,1,1
+SE09,D08,5,Logistic Regression (24 (accel)),8,1,1,1
+SE09,D08,5,Random Forest (48),8,0,0,0
+SE09,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE10,D07,1,Threshold Baseline (48),8,4,1,1
+SE10,D07,1,Logistic Regression (48),8,0,0,0
+SE10,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D07,1,Random Forest (48),8,0,0,0
+SE10,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE10,D07,2,Threshold Baseline (48),8,4,1,1
+SE10,D07,2,Logistic Regression (48),8,1,1,1
+SE10,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D07,2,Random Forest (48),8,0,0,0
+SE10,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE10,D07,3,Threshold Baseline (48),8,6,1,1
+SE10,D07,3,Logistic Regression (48),8,1,1,1
+SE10,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D07,3,Random Forest (48),8,0,0,0
+SE10,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE10,D07,4,Threshold Baseline (48),8,4,1,1
+SE10,D07,4,Logistic Regression (48),8,1,1,1
+SE10,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D07,4,Random Forest (48),8,0,0,0
+SE10,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE10,D07,5,Threshold Baseline (48),8,4,1,1
+SE10,D07,5,Logistic Regression (48),8,0,0,0
+SE10,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D07,5,Random Forest (48),8,0,0,0
+SE10,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE10,D08,1,Threshold Baseline (48),8,5,1,1
+SE10,D08,1,Logistic Regression (48),8,1,1,1
+SE10,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D08,1,Random Forest (48),8,0,0,0
+SE10,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE10,D08,2,Threshold Baseline (48),8,4,1,1
+SE10,D08,2,Logistic Regression (48),8,1,1,1
+SE10,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D08,2,Random Forest (48),8,0,0,0
+SE10,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE10,D08,3,Threshold Baseline (48),8,5,1,1
+SE10,D08,3,Logistic Regression (48),8,0,0,0
+SE10,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D08,3,Random Forest (48),8,0,0,0
+SE10,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE10,D08,4,Threshold Baseline (48),8,4,1,1
+SE10,D08,4,Logistic Regression (48),8,1,1,1
+SE10,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D08,4,Random Forest (48),8,0,0,0
+SE10,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE10,D08,5,Threshold Baseline (48),8,5,1,1
+SE10,D08,5,Logistic Regression (48),8,2,1,2
+SE10,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE10,D08,5,Random Forest (48),8,0,0,0
+SE10,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE11,D07,1,Threshold Baseline (48),8,4,1,2
+SE11,D07,1,Logistic Regression (48),8,5,1,2
+SE11,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D07,1,Random Forest (48),8,0,0,0
+SE11,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE11,D07,2,Threshold Baseline (48),8,4,1,1
+SE11,D07,2,Logistic Regression (48),8,4,1,2
+SE11,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D07,2,Random Forest (48),8,0,0,0
+SE11,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE11,D07,3,Threshold Baseline (48),8,2,1,1
+SE11,D07,3,Logistic Regression (48),8,6,1,1
+SE11,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D07,3,Random Forest (48),8,0,0,0
+SE11,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE11,D07,4,Threshold Baseline (48),8,0,0,0
+SE11,D07,4,Logistic Regression (48),8,5,1,1
+SE11,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D07,4,Random Forest (48),8,0,0,0
+SE11,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE11,D07,5,Threshold Baseline (48),8,4,1,1
+SE11,D07,5,Logistic Regression (48),8,5,1,1
+SE11,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D07,5,Random Forest (48),8,0,0,0
+SE11,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE11,D08,1,Threshold Baseline (48),8,5,1,1
+SE11,D08,1,Logistic Regression (48),8,2,1,2
+SE11,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D08,1,Random Forest (48),8,0,0,0
+SE11,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE11,D08,2,Threshold Baseline (48),8,5,1,1
+SE11,D08,2,Logistic Regression (48),8,2,1,2
+SE11,D08,2,Logistic Regression (24 (accel)),8,1,1,1
+SE11,D08,2,Random Forest (48),8,0,0,0
+SE11,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE11,D08,3,Threshold Baseline (48),8,5,1,1
+SE11,D08,3,Logistic Regression (48),8,2,1,2
+SE11,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D08,3,Random Forest (48),8,0,0,0
+SE11,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE11,D08,4,Threshold Baseline (48),8,4,1,1
+SE11,D08,4,Logistic Regression (48),8,1,1,1
+SE11,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D08,4,Random Forest (48),8,0,0,0
+SE11,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE11,D08,5,Threshold Baseline (48),8,4,1,1
+SE11,D08,5,Logistic Regression (48),8,1,1,1
+SE11,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE11,D08,5,Random Forest (48),8,0,0,0
+SE11,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE12,D07,1,Threshold Baseline (48),8,4,1,1
+SE12,D07,1,Logistic Regression (48),8,8,1,1
+SE12,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D07,1,Random Forest (48),8,0,0,0
+SE12,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE12,D07,2,Threshold Baseline (48),8,5,1,1
+SE12,D07,2,Logistic Regression (48),8,8,1,1
+SE12,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D07,2,Random Forest (48),8,0,0,0
+SE12,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE12,D07,3,Threshold Baseline (48),8,2,1,1
+SE12,D07,3,Logistic Regression (48),8,7,1,1
+SE12,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D07,3,Random Forest (48),8,0,0,0
+SE12,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE12,D07,4,Threshold Baseline (48),8,4,1,1
+SE12,D07,4,Logistic Regression (48),8,7,1,1
+SE12,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D07,4,Random Forest (48),8,0,0,0
+SE12,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE12,D07,5,Threshold Baseline (48),8,4,1,1
+SE12,D07,5,Logistic Regression (48),8,7,1,1
+SE12,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D07,5,Random Forest (48),8,0,0,0
+SE12,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE12,D08,1,Threshold Baseline (48),8,5,1,1
+SE12,D08,1,Logistic Regression (48),8,5,1,1
+SE12,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D08,1,Random Forest (48),8,0,0,0
+SE12,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE12,D08,2,Threshold Baseline (48),8,5,1,1
+SE12,D08,2,Logistic Regression (48),8,3,1,1
+SE12,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D08,2,Random Forest (48),8,0,0,0
+SE12,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE12,D08,3,Threshold Baseline (48),8,4,1,1
+SE12,D08,3,Logistic Regression (48),8,3,1,2
+SE12,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D08,3,Random Forest (48),8,0,0,0
+SE12,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE12,D08,4,Threshold Baseline (48),8,4,1,1
+SE12,D08,4,Logistic Regression (48),8,4,1,1
+SE12,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D08,4,Random Forest (48),8,0,0,0
+SE12,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE12,D08,5,Threshold Baseline (48),8,5,1,1
+SE12,D08,5,Logistic Regression (48),8,2,1,1
+SE12,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE12,D08,5,Random Forest (48),8,0,0,0
+SE12,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE13,D07,1,Threshold Baseline (48),8,5,1,1
+SE13,D07,1,Logistic Regression (48),8,4,1,2
+SE13,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D07,1,Random Forest (48),8,0,0,0
+SE13,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE13,D07,2,Threshold Baseline (48),8,4,1,1
+SE13,D07,2,Logistic Regression (48),8,2,1,2
+SE13,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D07,2,Random Forest (48),8,0,0,0
+SE13,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE13,D07,3,Threshold Baseline (48),8,4,1,1
+SE13,D07,3,Logistic Regression (48),8,2,1,2
+SE13,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D07,3,Random Forest (48),8,0,0,0
+SE13,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE13,D07,4,Threshold Baseline (48),8,4,1,1
+SE13,D07,4,Logistic Regression (48),8,3,1,2
+SE13,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D07,4,Random Forest (48),8,0,0,0
+SE13,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE13,D07,5,Threshold Baseline (48),8,4,1,1
+SE13,D07,5,Logistic Regression (48),8,3,1,2
+SE13,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D07,5,Random Forest (48),8,0,0,0
+SE13,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE13,D08,1,Threshold Baseline (48),8,4,1,1
+SE13,D08,1,Logistic Regression (48),8,3,1,1
+SE13,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D08,1,Random Forest (48),8,0,0,0
+SE13,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE13,D08,2,Threshold Baseline (48),8,4,1,1
+SE13,D08,2,Logistic Regression (48),8,4,1,2
+SE13,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D08,2,Random Forest (48),8,0,0,0
+SE13,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE13,D08,3,Threshold Baseline (48),8,5,1,1
+SE13,D08,3,Logistic Regression (48),8,2,1,2
+SE13,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D08,3,Random Forest (48),8,0,0,0
+SE13,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE13,D08,4,Threshold Baseline (48),8,4,1,1
+SE13,D08,4,Logistic Regression (48),8,2,1,1
+SE13,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D08,4,Random Forest (48),8,0,0,0
+SE13,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE13,D08,5,Threshold Baseline (48),8,6,1,1
+SE13,D08,5,Logistic Regression (48),8,3,1,2
+SE13,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE13,D08,5,Random Forest (48),8,0,0,0
+SE13,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE14,D07,1,Threshold Baseline (48),8,5,1,1
+SE14,D07,1,Logistic Regression (48),8,3,1,2
+SE14,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D07,1,Random Forest (48),8,0,0,0
+SE14,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE14,D07,2,Threshold Baseline (48),8,5,1,1
+SE14,D07,2,Logistic Regression (48),8,5,1,1
+SE14,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D07,2,Random Forest (48),8,0,0,0
+SE14,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE14,D07,3,Threshold Baseline (48),8,4,1,1
+SE14,D07,3,Logistic Regression (48),8,4,1,1
+SE14,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D07,3,Random Forest (48),8,0,0,0
+SE14,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE14,D07,5,Threshold Baseline (48),8,4,1,1
+SE14,D07,5,Logistic Regression (48),8,3,1,2
+SE14,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D07,5,Random Forest (48),8,0,0,0
+SE14,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE14,D08,1,Threshold Baseline (48),8,4,1,1
+SE14,D08,1,Logistic Regression (48),8,1,1,1
+SE14,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D08,1,Random Forest (48),8,0,0,0
+SE14,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE14,D08,2,Threshold Baseline (48),8,5,1,1
+SE14,D08,2,Logistic Regression (48),8,2,1,2
+SE14,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D08,2,Random Forest (48),8,0,0,0
+SE14,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE14,D08,3,Threshold Baseline (48),8,5,1,1
+SE14,D08,3,Logistic Regression (48),8,2,1,1
+SE14,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D08,3,Random Forest (48),8,0,0,0
+SE14,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE14,D08,4,Threshold Baseline (48),8,4,1,1
+SE14,D08,4,Logistic Regression (48),8,3,1,2
+SE14,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D08,4,Random Forest (48),8,0,0,0
+SE14,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE14,D08,5,Threshold Baseline (48),8,5,1,1
+SE14,D08,5,Logistic Regression (48),8,6,1,1
+SE14,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE14,D08,5,Random Forest (48),8,0,0,0
+SE14,D08,5,Random Forest (24 (accel)),8,0,0,0
+SE15,D07,1,Threshold Baseline (48),8,2,1,1
+SE15,D07,1,Logistic Regression (48),8,2,1,1
+SE15,D07,1,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D07,1,Random Forest (48),8,0,0,0
+SE15,D07,1,Random Forest (24 (accel)),8,0,0,0
+SE15,D07,2,Threshold Baseline (48),8,0,0,0
+SE15,D07,2,Logistic Regression (48),8,3,1,2
+SE15,D07,2,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D07,2,Random Forest (48),8,0,0,0
+SE15,D07,2,Random Forest (24 (accel)),8,0,0,0
+SE15,D07,3,Threshold Baseline (48),8,2,1,1
+SE15,D07,3,Logistic Regression (48),8,4,1,2
+SE15,D07,3,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D07,3,Random Forest (48),8,0,0,0
+SE15,D07,3,Random Forest (24 (accel)),8,0,0,0
+SE15,D07,4,Threshold Baseline (48),8,0,0,0
+SE15,D07,4,Logistic Regression (48),8,2,1,1
+SE15,D07,4,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D07,4,Random Forest (48),8,0,0,0
+SE15,D07,4,Random Forest (24 (accel)),8,0,0,0
+SE15,D07,5,Threshold Baseline (48),8,2,1,1
+SE15,D07,5,Logistic Regression (48),8,5,1,2
+SE15,D07,5,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D07,5,Random Forest (48),8,0,0,0
+SE15,D07,5,Random Forest (24 (accel)),8,0,0,0
+SE15,D08,1,Threshold Baseline (48),8,4,1,1
+SE15,D08,1,Logistic Regression (48),8,2,1,2
+SE15,D08,1,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D08,1,Random Forest (48),8,0,0,0
+SE15,D08,1,Random Forest (24 (accel)),8,0,0,0
+SE15,D08,2,Threshold Baseline (48),8,6,1,1
+SE15,D08,2,Logistic Regression (48),8,2,1,2
+SE15,D08,2,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D08,2,Random Forest (48),8,0,0,0
+SE15,D08,2,Random Forest (24 (accel)),8,0,0,0
+SE15,D08,3,Threshold Baseline (48),8,4,1,1
+SE15,D08,3,Logistic Regression (48),8,1,1,1
+SE15,D08,3,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D08,3,Random Forest (48),8,0,0,0
+SE15,D08,3,Random Forest (24 (accel)),8,0,0,0
+SE15,D08,4,Threshold Baseline (48),8,5,1,1
+SE15,D08,4,Logistic Regression (48),8,2,1,2
+SE15,D08,4,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D08,4,Random Forest (48),8,0,0,0
+SE15,D08,4,Random Forest (24 (accel)),8,0,0,0
+SE15,D08,5,Threshold Baseline (48),8,5,1,1
+SE15,D08,5,Logistic Regression (48),8,1,1,1
+SE15,D08,5,Logistic Regression (24 (accel)),8,0,0,0
+SE15,D08,5,Random Forest (48),8,0,0,0
+SE15,D08,5,Random Forest (24 (accel)),8,0,0,0
