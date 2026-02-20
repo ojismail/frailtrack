@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>FrailTrack</title>
+    <title>Steady</title>
     <style>
 /* ============================================
-   FrailTrack — Apple Health-Inspired Design
+   Steady — Apple Health-Inspired Design
    ============================================ */
 
 * {
@@ -17,16 +17,16 @@
 }
 
 body {
-    font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 17px;
     line-height: 1.47;
     color: #1C1C1E;
-    background-color: #F2F2F7;
+    background-color: #000000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -36,13 +36,13 @@ h1 {
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: 0.37px;
-    color: #1C1C1E;
+    color: #FFFFFF;
     margin-bottom: 4px;
 }
 
 .subtitle {
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     font-weight: 400;
     margin-bottom: 28px;
 }
@@ -50,13 +50,15 @@ h1 {
 .container {
     width: 100%;
     max-width: 428px;
+    padding: 20px;
+    padding-top: env(safe-area-inset-top, 20px);
 }
 
 /* --- App Header --- */
 .app-header {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     margin-bottom: 4px;
 }
 
@@ -64,15 +66,16 @@ h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #007AFF, #5AC8FA);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #30D158, #34C759);
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(48, 209, 88, 0.3);
 }
 
 /* --- Screens --- */
@@ -91,13 +94,12 @@ h1 {
 
 /* --- Educational Info Card --- */
 .edu-info {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 20px;
     margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.6);
     line-height: 1.53;
     width: 100%;
 }
@@ -105,20 +107,19 @@ h1 {
 /* --- Instructions --- */
 .instructions {
     font-size: 15px;
-    color: #1C1C1E;
+    color: rgba(255,255,255,0.85);
     line-height: 1.53;
     margin-bottom: 20px;
     padding: 20px;
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     width: 100%;
 }
 
 .instructions strong {
     font-size: 13px;
     font-weight: 600;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.4);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -133,7 +134,7 @@ h1 {
     font-weight: 600;
     line-height: 1.2;
     border: none;
-    border-radius: 12px;
+    border-radius: 14px;
     cursor: pointer;
     text-align: center;
     transition: opacity 0.15s ease, transform 0.1s ease;
@@ -146,24 +147,25 @@ h1 {
 }
 
 .btn-primary {
-    background-color: #007AFF;
+    background: linear-gradient(135deg, #30D158, #34C759);
     color: #FFFFFF;
+    box-shadow: 0 2px 12px rgba(48,209,88,0.3);
 }
 .btn-primary:hover {
-    background-color: #0071EB;
+    opacity: 0.9;
 }
 
 .btn-secondary {
-    background-color: #E5E5EA;
-    color: #1C1C1E;
+    background-color: #2C2C2E;
+    color: #FFFFFF;
 }
 .btn-secondary:hover {
-    background-color: #D1D1D6;
+    background-color: #3A3A3C;
 }
 
 .btn-link {
     background: none;
-    color: #007AFF;
+    color: #30D158;
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;
@@ -179,7 +181,7 @@ h1 {
 .timer-display {
     font-size: 96px;
     font-weight: 200;
-    color: #1C1C1E;
+    color: #FFFFFF;
     text-align: center;
     letter-spacing: -2px;
     margin: 24px 0;
@@ -189,10 +191,9 @@ h1 {
 /* --- Live Accel Graph --- */
 .live-graph-container {
     width: 100%;
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 16px 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     margin-bottom: 16px;
 }
 .live-graph-container canvas {
@@ -203,7 +204,7 @@ h1 {
 }
 .live-graph-label {
     font-size: 11px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.4);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: center;
@@ -216,7 +217,7 @@ h1 {
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     font-weight: 500;
     margin-bottom: 8px;
 }
@@ -243,49 +244,47 @@ h1 {
 .results-header h2 {
     font-size: 28px;
     font-weight: 700;
-    color: #1C1C1E;
+    color: #FFFFFF;
     margin-bottom: 2px;
 }
 .results-header .date {
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
 }
 
 /* Tier 1: Rep Count */
 .tier-rep {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 28px 24px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     margin-bottom: 12px;
     width: 100%;
 }
 .tier-rep .big-number {
     font-size: 64px;
     font-weight: 700;
-    color: #007AFF;
+    color: #30D158;
     line-height: 1;
     letter-spacing: -1px;
 }
 .tier-rep .label {
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     margin-top: 4px;
     font-weight: 500;
 }
 .tier-rep .norm-range {
     font-size: 13px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.35);
     margin-top: 8px;
 }
 
 /* Tier 2: Power */
 .tier-power {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 20px 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     margin-bottom: 12px;
     width: 100%;
     display: flex;
@@ -304,11 +303,11 @@ h1 {
 .tier-power .power-label {
     font-size: 15px;
     font-weight: 600;
-    color: #1C1C1E;
+    color: #FFFFFF;
 }
 .tier-power .power-note {
     font-size: 13px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.35);
     margin-top: 2px;
 }
 
@@ -322,11 +321,10 @@ h1 {
 }
 
 .quality-card {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-    border-left: 3px solid #E5E5EA;
+    border-left: 3px solid #3A3A3C;
 }
 .quality-card.status-green { border-left-color: #30D158; }
 .quality-card.status-yellow { border-left-color: #FF9F0A; }
@@ -335,14 +333,14 @@ h1 {
 .quality-card .card-title {
     font-size: 11px;
     font-weight: 600;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 2px;
 }
 .quality-card .card-dimension {
     font-size: 11px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.35);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
@@ -354,7 +352,7 @@ h1 {
 }
 .quality-card .card-detail {
     font-size: 13px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     line-height: 1.38;
 }
 .quality-card .mini-chart {
@@ -365,7 +363,7 @@ h1 {
 
 .status-msg {
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     margin-top: 16px;
     text-align: center;
 }
@@ -377,10 +375,9 @@ h1 {
 
 /* --- Setup Screen --- */
 .setup-card {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     margin-bottom: 20px;
     width: 100%;
 }
@@ -388,7 +385,7 @@ h1 {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     text-transform: uppercase;
     letter-spacing: 0.4px;
     margin-bottom: 6px;
@@ -401,10 +398,10 @@ h1 {
     padding: 12px 14px;
     font-family: inherit;
     font-size: 17px;
-    color: #1C1C1E;
-    border: 1px solid #E5E5EA;
+    color: #FFFFFF;
+    border: 1px solid #3A3A3C;
     border-radius: 10px;
-    background: #F2F2F7;
+    background: #2C2C2E;
     outline: none;
     -webkit-appearance: none;
     appearance: none;
@@ -412,11 +409,18 @@ h1 {
 }
 .setup-card input:focus,
 .setup-card select:focus {
-    border-color: #007AFF;
+    border-color: #30D158;
+}
+.setup-card input::placeholder {
+    color: rgba(255,255,255,0.3);
+}
+.setup-card select option {
+    background: #2C2C2E;
+    color: #FFFFFF;
 }
 .unit-toggle {
     display: flex;
-    background: #E5E5EA;
+    background: #2C2C2E;
     border-radius: 9px;
     padding: 2px;
     margin-bottom: 12px;
@@ -430,20 +434,20 @@ h1 {
     border: none;
     border-radius: 7px;
     background: transparent;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .unit-toggle button.active {
-    background: #FFFFFF;
-    color: #1C1C1E;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background: #3A3A3C;
+    color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 .ft-in-row { display: flex; gap: 10px; }
 .ft-in-row input { flex: 1; }
 .optional-label {
     font-size: 12px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.3);
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
@@ -460,10 +464,11 @@ h1 {
 .dashboard-header h2 {
     font-size: 22px;
     font-weight: 700;
+    color: #FFFFFF;
 }
 .metric-tabs {
     display: flex;
-    background: #E5E5EA;
+    background: #2C2C2E;
     border-radius: 9px;
     padding: 2px;
     margin-bottom: 16px;
@@ -479,53 +484,51 @@ h1 {
     border: none;
     border-radius: 7px;
     background: transparent;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.2s ease;
 }
 .metric-tabs button.active {
-    background: #FFFFFF;
-    color: #1C1C1E;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background: #3A3A3C;
+    color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 .chart-container {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 16px;
     padding: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
     margin-bottom: 16px;
     width: 100%;
     text-align: center;
 }
 .chart-container .chart-msg {
     font-size: 15px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.35);
     padding: 40px 20px;
 }
 .trend-alerts { width: 100%; margin-bottom: 12px; }
 .trend-alert {
-    background: #FFFFFF;
+    background: #1C1C1E;
     border-radius: 12px;
     padding: 14px 16px;
     font-size: 15px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     margin-bottom: 8px;
     line-height: 1.47;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
 }
 .session-list { width: 100%; }
 .session-list h3 {
     font-size: 13px;
     font-weight: 600;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
 }
 .session-item {
     padding: 14px 0;
-    border-bottom: 0.5px solid #E5E5EA;
+    border-bottom: 0.5px solid #2C2C2E;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -534,8 +537,8 @@ h1 {
 }
 .session-item:active { opacity: 0.6; }
 .session-item .session-info { flex: 1; }
-.session-item .session-date { font-size: 17px; font-weight: 400; color: #1C1C1E; }
-.session-item .session-stats { font-size: 13px; color: #8E8E93; margin-top: 2px; }
+.session-item .session-date { font-size: 17px; font-weight: 400; color: #FFFFFF; }
+.session-item .session-stats { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 2px; }
 .session-item .session-flags { font-size: 13px; color: #FF9F0A; margin-top: 2px; font-weight: 500; }
 .session-item .session-delete {
     padding: 6px 12px;
@@ -550,11 +553,11 @@ h1 {
     border-radius: 8px;
     transition: background 0.15s ease;
 }
-.session-item .session-delete:active { background: rgba(255,69,58,0.08); }
+.session-item .session-delete:active { background: rgba(255,69,58,0.12); }
 .btn-back-nav {
     background: none;
     border: none;
-    color: #007AFF;
+    color: #30D158;
     font-family: inherit;
     font-size: 17px;
     cursor: pointer;
@@ -563,7 +566,7 @@ h1 {
 .empty-dashboard {
     text-align: center;
     padding: 60px 20px;
-    color: #AEAEB2;
+    color: rgba(255,255,255,0.35);
     font-size: 17px;
 }
 
@@ -574,7 +577,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(242, 242, 247, 0.85);
+    background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -585,15 +588,15 @@ h1 {
 }
 .loading-overlay p {
     font-size: 17px;
-    color: #8E8E93;
+    color: rgba(255,255,255,0.55);
     margin-top: 16px;
     font-weight: 500;
 }
 .spinner {
     width: 36px;
     height: 36px;
-    border: 3px solid #E5E5EA;
-    border-top: 3px solid #007AFF;
+    border: 3px solid #3A3A3C;
+    border-top: 3px solid #30D158;
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
 }
@@ -607,9 +610,9 @@ h1 {
 
 <div class="container">
     <div class="app-header">
-        <div class="logo-mark">F</div>
+        <div class="logo-mark">S</div>
         <div>
-            <h1>FrailTrack</h1>
+            <h1>Steady</h1>
             <p class="subtitle">Functional Fitness Analysis</p>
         </div>
     </div>
@@ -617,10 +620,10 @@ h1 {
     <!-- Screen: Setup (first visit only) -->
     <div id="screen-setup" class="screen">
         <div style="text-align:center; margin-bottom:20px;">
-            <p style="font-size:17px; color:#8E8E93;">Let's set up your profile to personalize your results.</p>
+            <p style="font-size:17px; color:rgba(255,255,255,0.55);">Let's set up your profile to personalize your results.</p>
         </div>
         <div class="setup-card">
-            <label>Height <span style="color:#FF453A">*</span></label>
+            <label>Height <span style="color:#FF453A;">*</span></label>
             <div class="unit-toggle" id="unit-toggle">
                 <button class="active" data-unit="cm">cm</button>
                 <button data-unit="ftin">ft / in</button>
@@ -795,30 +798,38 @@ const GRAPH_SAMPLES = 250;     // 5 seconds at 50Hz
 const GRAPH_Y_MAX = 3.0;       // g's — Y axis max
 
 // =============================================================
-// AUDIO — create AudioContext on first user tap anywhere
+// AUDIO — robust cross-platform beep (iOS + Android + Desktop)
 // =============================================================
 let audioCtx = null;
-document.addEventListener('click', () => {
+
+function ensureAudioContext() {
     if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
     }
-}, { once: false });
+    return audioCtx;
+}
+
+// Warm up audio on every user tap so iOS doesn't suspend it
+document.addEventListener('touchstart', ensureAudioContext, { passive: true });
+document.addEventListener('click', ensureAudioContext);
 
 function playBeep(frequency = 800, duration = 200) {
-    if (!audioCtx) return;
     try {
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
+        const ctx = ensureAudioContext();
+        const oscillator = ctx.createOscillator();
+        const gainNode = ctx.createGain();
         oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
+        gainNode.connect(ctx.destination);
         oscillator.frequency.value = frequency;
-        gainNode.gain.value = 0.3;
-        oscillator.start();
-        oscillator.stop(audioCtx.currentTime + duration / 1000);
+        oscillator.type = 'sine';
+        gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
+        // Fade out to avoid click/pop
+        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration / 1000);
+        oscillator.start(ctx.currentTime);
+        oscillator.stop(ctx.currentTime + duration / 1000 + 0.05);
     } catch (e) {
         console.warn('Audio beep failed:', e);
     }
@@ -881,18 +892,18 @@ const NORMATIVE_TABLE = {
 // =============================================================
 function getProfile() {
     try {
-        const raw = localStorage.getItem('frailtrack_profile');
+        const raw = localStorage.getItem('steady_profile');
         return raw ? JSON.parse(raw) : null;
     } catch (e) { return null; }
 }
 
 function saveProfile(profile) {
-    localStorage.setItem('frailtrack_profile', JSON.stringify(profile));
+    localStorage.setItem('steady_profile', JSON.stringify(profile));
 }
 
 function getSessions() {
     try {
-        const raw = localStorage.getItem('frailtrack_sessions');
+        const raw = localStorage.getItem('steady_sessions');
         return raw ? JSON.parse(raw) : [];
     } catch (e) { return []; }
 }
@@ -918,7 +929,7 @@ function saveSessionToStorage(sessionData) {
     };
     sessions.push(entry);
     try {
-        localStorage.setItem('frailtrack_sessions', JSON.stringify(sessions));
+        localStorage.setItem('steady_sessions', JSON.stringify(sessions));
     } catch (e) {
         if (e.name === 'QuotaExceededError' || e.code === 22) {
             alert('Storage is full. Delete old sessions from the Dashboard to save new ones.');
@@ -933,7 +944,7 @@ function saveSessionToStorage(sessionData) {
 function deleteSession(sessionId) {
     let sessions = getSessions();
     sessions = sessions.filter(s => s.id !== sessionId);
-    localStorage.setItem('frailtrack_sessions', JSON.stringify(sessions));
+    localStorage.setItem('steady_sessions', JSON.stringify(sessions));
 }
 
 function getNormativeRange(ageGroup, sex) {
@@ -1014,7 +1025,7 @@ function drawLiveGraph() {
     const plotH = h - padTop - padBottom;
 
     // Y axis labels
-    ctx.fillStyle = '#AEAEB2';
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
     ctx.font = '10px -apple-system, sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText(GRAPH_Y_MAX.toFixed(1), padLeft - 4, padTop + 8);
@@ -1024,7 +1035,7 @@ function drawLiveGraph() {
 
     // Grid lines
     ctx.beginPath();
-    ctx.strokeStyle = '#F2F2F7';
+    ctx.strokeStyle = 'rgba(255,255,255,0.1)';
     ctx.lineWidth = 0.5;
     ctx.moveTo(padLeft, padTop + plotH / 2);
     ctx.lineTo(padLeft + plotW, padTop + plotH / 2);
@@ -1051,7 +1062,7 @@ function drawLiveGraph() {
     if (samples.length < 2) return;
 
     ctx.beginPath();
-    ctx.strokeStyle = '#007AFF';
+    ctx.strokeStyle = '#30D158';
     ctx.lineWidth = 1.5;
 
     const xStep = plotW / GRAPH_SAMPLES;
@@ -1100,7 +1111,7 @@ function drawLiveGraph() {
     // Current value text
     if (samples.length > 0) {
         const current = samples[samples.length - 1];
-        ctx.fillStyle = current >= PEAK_THRESHOLD ? '#FF9F0A' : '#007AFF';
+        ctx.fillStyle = current >= PEAK_THRESHOLD ? '#FF9F0A' : '#30D158';
         ctx.font = 'bold 14px -apple-system, sans-serif';
         ctx.textAlign = 'right';
         ctx.fillText(current.toFixed(2) + 'g', padLeft + plotW, padTop + 14);
@@ -1200,7 +1211,6 @@ async function startRealSensors() {
 
     sensorStatus.textContent = 'Recording';
     showScreen(screenTest);
-    playBeep(800, 300);
     startTimer();
     startGraphUpdates();
 
@@ -1451,7 +1461,7 @@ function stopTest() {
 // =============================================================
 function createBarChart(values, options = {}) {
     const {
-        width = 140, height = 60, color = '#007AFF',
+        width = 140, height = 60, color = '#30D158',
         showTrend = false, trendSlope = 0, trendIntercept = 0
     } = options;
     if (!values || values.length === 0) return '';
@@ -1547,7 +1557,7 @@ function renderResults(session, savedDate) {
     document.getElementById('status-accel').textContent = accelStatusText;
     document.getElementById('status-accel').className = 'card-status ' + statusTextClass(session.flags.weakness_accel);
     document.getElementById('detail-accel').innerHTML =
-        `Avg ${meanAccel.toFixed(1)} m/s\u00B2 across ${accels.length} rep${accels.length !== 1 ? 's' : ''}<br><span style="color:#AEAEB2;font-size:12px;">How forcefully you push up</span>`;
+        `Avg ${meanAccel.toFixed(1)} m/s\u00B2 across ${accels.length} rep${accels.length !== 1 ? 's' : ''}<br><span style="color:rgba(255,255,255,0.3);font-size:12px;">How forcefully you push up</span>`;
 
     const gyros = perRep.map(r => r.peak_gyro);
     const meanGyro = gyros.reduce((a, b) => a + b, 0) / gyros.length;
@@ -1558,7 +1568,7 @@ function renderResults(session, savedDate) {
     document.getElementById('status-gyro').textContent = gyroStatusText;
     document.getElementById('status-gyro').className = 'card-status ' + statusTextClass(gyroStatus);
     document.getElementById('detail-gyro').innerHTML =
-        `Avg ${meanGyro.toFixed(2)} rad/s across ${gyros.length} rep${gyros.length !== 1 ? 's' : ''}<br><span style="color:#AEAEB2;font-size:12px;">How quickly you transition</span>`;
+        `Avg ${meanGyro.toFixed(2)} rad/s across ${gyros.length} rep${gyros.length !== 1 ? 's' : ''}<br><span style="color:rgba(255,255,255,0.3);font-size:12px;">How quickly you transition</span>`;
 
     const cvCard = document.getElementById('card-cv');
     const cvFlag = session.flags.exhaustion_cv;
@@ -1569,7 +1579,7 @@ function renderResults(session, savedDate) {
     const cvDetailText = cvFlag === 'stable' ? 'Consistent reps throughout' :
         cvFlag === 'moderate' ? 'Some variation between reps' : 'Significant variation between reps';
     document.getElementById('detail-cv').innerHTML =
-        cvDetailText + '<br><span style="color:#AEAEB2;font-size:12px;">Rep-to-rep similarity</span>';
+        cvDetailText + '<br><span style="color:rgba(255,255,255,0.3);font-size:12px;">Rep-to-rep similarity</span>';
 
     const fatigueCard = document.getElementById('card-fatigue');
     const fatFlag = session.flags.exhaustion_fatigue;
@@ -1591,7 +1601,7 @@ function renderResults(session, savedDate) {
         fatFlag === 'mild_decline' ? 'Later reps slightly weaker' :
         'Notable drop-off in later reps';
     document.getElementById('detail-fatigue').innerHTML =
-        fatDetailText + '<br><span style="color:#AEAEB2;font-size:12px;">Early vs. late performance</span>';
+        fatDetailText + '<br><span style="color:rgba(255,255,255,0.3);font-size:12px;">Early vs. late performance</span>';
 }
 
 function statusColor(flag) {
@@ -1746,8 +1756,8 @@ function renderTrendChart(sessions) {
         return { x, y };
     });
 
-    let svgContent = `<line x1="${pad}" y1="${pad}" x2="${pad}" y2="${pad + plotH}" stroke="#E5E5EA" stroke-width="1"/>`;
-    svgContent += `<line x1="${pad}" y1="${pad + plotH}" x2="${pad + plotW}" y2="${pad + plotH}" stroke="#E5E5EA" stroke-width="1"/>`;
+    let svgContent = `<line x1="${pad}" y1="${pad}" x2="${pad}" y2="${pad + plotH}" stroke="#3A3A3C" stroke-width="1"/>`;
+    svgContent += `<line x1="${pad}" y1="${pad + plotH}" x2="${pad + plotW}" y2="${pad + plotH}" stroke="#3A3A3C" stroke-width="1"/>`;
 
     const threshold = getThresholdForMetric(currentMetric);
     if (threshold && threshold.value >= minVal && threshold.value <= maxVal) {
@@ -1758,20 +1768,20 @@ function renderTrendChart(sessions) {
 
     if (points.length > 1) {
         const pathD = points.map((p, i) => (i === 0 ? `M${p.x},${p.y}` : `L${p.x},${p.y}`)).join(' ');
-        svgContent += `<path d="${pathD}" fill="none" stroke="#007AFF" stroke-width="2"/>`;
+        svgContent += `<path d="${pathD}" fill="none" stroke="#30D158" stroke-width="2"/>`;
     }
 
     points.forEach((p, i) => {
-        svgContent += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#007AFF"/>`;
-        svgContent += `<text x="${p.x}" y="${p.y - 8}" text-anchor="middle" font-size="11" fill="#1C1C1E">${typeof values[i] === 'number' ? (Number.isInteger(values[i]) ? values[i] : values[i].toFixed(2)) : values[i]}</text>`;
-        svgContent += `<text x="${p.x}" y="${pad + plotH + 14}" text-anchor="middle" font-size="10" fill="#AEAEB2">${labels[i]}</text>`;
+        svgContent += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="#30D158"/>`;
+        svgContent += `<text x="${p.x}" y="${p.y - 8}" text-anchor="middle" font-size="11" fill="#FFFFFF">${typeof values[i] === 'number' ? (Number.isInteger(values[i]) ? values[i] : values[i].toFixed(2)) : values[i]}</text>`;
+        svgContent += `<text x="${p.x}" y="${pad + plotH + 14}" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.4)">${labels[i]}</text>`;
     });
 
-    svgContent += `<text x="${pad - 4}" y="${pad - 4}" text-anchor="end" font-size="10" fill="#AEAEB2">${typeof maxVal === 'number' ? (Number.isInteger(maxVal) ? maxVal : maxVal.toFixed(2)) : maxVal}</text>`;
-    svgContent += `<text x="${pad - 4}" y="${pad + plotH + 4}" text-anchor="end" font-size="10" fill="#AEAEB2">${typeof minVal === 'number' ? (Number.isInteger(minVal) ? minVal : minVal.toFixed(2)) : minVal}</text>`;
+    svgContent += `<text x="${pad - 4}" y="${pad - 4}" text-anchor="end" font-size="10" fill="rgba(255,255,255,0.4)">${typeof maxVal === 'number' ? (Number.isInteger(maxVal) ? maxVal : maxVal.toFixed(2)) : maxVal}</text>`;
+    svgContent += `<text x="${pad - 4}" y="${pad + plotH + 4}" text-anchor="end" font-size="10" fill="rgba(255,255,255,0.4)">${typeof minVal === 'number' ? (Number.isInteger(minVal) ? minVal : minVal.toFixed(2)) : minVal}</text>`;
 
     const label = getMetricLabel(currentMetric);
-    svgContent += `<text x="${W / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="#8E8E93">${label}</text>`;
+    svgContent += `<text x="${W / 2}" y="${H - 2}" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.55)">${label}</text>`;
 
     container.innerHTML = `<svg width="100%" viewBox="0 0 ${W} ${H}">${svgContent}</svg>`;
 }
@@ -1882,6 +1892,9 @@ btnStart.addEventListener('click', () => {
         alert('Motion sensors are not available on this device.');
         return;
     }
+    // Play start beep immediately in user gesture (required for iOS)
+    ensureAudioContext();
+    playBeep(800, 300);
     startRealSensors();
 });
 
